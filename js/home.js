@@ -125,12 +125,6 @@ function init() {
 //图片轮播
 function changImg(num) {
     var len = $('.banList li').length; //获取图片有多少张
-    // console.log(index)
-    /*if (num == 'auto') { //定时器自动调用
-        num = index;
-    } else { //鼠标放上的时候 清楚定时器
-        clearInterval(timer);
-    }*/
     $('.banList li').eq(index).addClass('bannershow banneropacity').siblings().removeClass('bannershow banneropacity');
     $('.btnnum li').eq(index).addClass("current active").siblings().removeClass("current active");
     $(".banList li").eq(index-1).addClass('finished').siblings().removeClass("finished");
