@@ -424,5 +424,5 @@ function initData () {
 
 initData();
 var interval = setInterval(function(){
-    initData();
+    // initData();
 }, 10000);

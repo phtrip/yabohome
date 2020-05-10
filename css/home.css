@@ -103,7 +103,7 @@ button,
     outline: none;
     font-size: 18px;
     cursor: pointer;
-    color: #67718f;
+    color: #6a7391;
     background:  url('../images/primary-medium-txt-normal@2x.png.webp');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -178,7 +178,7 @@ button,
 .float-right {
     position: fixed;
     z-index: 100;
-    top: 50%;
+    top: 35%;
     right: 0;
     width: 48px;
     height: 154px;
@@ -364,7 +364,7 @@ button,
     line-height: 84px;
     text-align: center;
     font-size: 16px;
-    color: #67718f;
+    color: #6a7391;
     cursor: pointer;
     transition: all .2s ease;
 }
@@ -392,11 +392,11 @@ button,
 }
 .header .user-info {
     font-size: 14px;
-    color: #67718f;
+    color: #6a7391;
 }
 .header a {
     font-size: 16px;
-    color: #67718f;
+    color: #6a7391;
     margin: 0 2px;
 }
 .header a:hover {
@@ -446,16 +446,16 @@ button,
 }
 
 #inner {
-  transition: transform .5s;
-  -webkit-transition: transform .5s;
+  transition: transform 2.5s;
+  -webkit-transition: transform 2.5s;
 }
 
 .banner {
-    margin-top: 104px;
-    width: 100%;
+    width: 1400px;
     overflow: hidden;
     height: 600px;
     z-index: 99;
+    margin: 104px auto 0;
     position: relative
 }
 .banner #inner {
@@ -472,8 +472,16 @@ button,
     /*display: none;*/
     opacity: 0;
 }
+.banList li a {
+    display: block;
+    width:1400px;
+    height:600px;
+    overflow:hidden;
+    position: relative;
+    margin: 0 auto;
+}
 .banner img {
-    width: 100%;
+    margin-left: -260px;
     height: 600px;
 }
 .btnnum{
@@ -615,7 +623,7 @@ button,
     margin-top: 80px;
 }
 .page .title p {
-    color: #67718f;
+    color: #6a7391;
     font-size: 14px;
 }
 .page .title span {
@@ -624,7 +632,8 @@ button,
     width: 100%;
     position: relative;
 }
-.content .box {
+.hot-live .box {
+    z-index: 2;
 }
 .page .title .left:after,
 .page .title .right:before {
@@ -724,15 +733,17 @@ button,
 .btn-group {
     text-align: right;
 }
-.hot-games .box,
+ 
 .best-service .box,
 .app-detail,
 .match .box,
 .bg-common {
+    position: relative;
+}
+.hot-live .bg-common  {
     background: url(../images/itembox-background-central@2x.png.webp);
     background-position: 0 -24px;
     background-size: 100% 100%;
-    box-shadow: 0 8px 12px 0 rgba(232,193,152,.5);
     position: relative;
 }
 .bg-common {
@@ -745,30 +756,31 @@ button,
     bottom: -20px;
 }
 
-.bg-common:before,
-.bg-common:after {
+.hot-live .bg-common:before,
+.hot-live .bg-common:after {
     content: '';
     display: block;
     position: absolute;
     width: 100%;
-    height: 44px;
+    height: 140px;
     left: 0;
 }
-.bg-common:before {
+.hot-live .bg-common:before {
     background: url(../images/itembox-background-top@2x.png.webp) no-repeat;
     background-size: 100%;  
 }
-.bg-common:after {
+.hot-live .bg-common:after {
     background: url(../images/itembox-background-bottom@2x.png.webp) no-repeat;
     background-size: 100%;  
-    padding-bottom: 50px;
-    box-shadow: 0 8px 12px 0 rgba(232,193,152,.5);
+    /*padding-bottom: 50px;*/
+    /*box-shadow: 0 8px 12px 0 rgba(232,193,152,.5);*/
     border-radius: 0 0 20px 20px;
+    background-position: 0 -15px;
 }
 .match {
 }
 .match .teams {
-    justify-content: center;
+    justify-content: flex-start;
     height: 50px;
     line-height: 50px;
     font-size: 16px;
@@ -776,6 +788,7 @@ button,
     color: #6a7391;
     position: relative;
     z-index: 4;
+    margin-left: 260px;
 }
 .match h3 {
     background: url(../images/title-box-bg@2x.png.webp) no-repeat;
@@ -794,7 +807,7 @@ button,
     padding: 0 30px;
     position: absolute;
     top: -65px;
-    left: 110px;
+    left: 190px;
 }
 .match .details {
     padding: 10px 40px 25px 40px;
@@ -867,6 +880,7 @@ button,
     position: absolute;
     left: -10px;
     z-index: -1;
+    transition: all ease .2s;
 }
 .details .odds a:hover:before {
     transform: rotateY(180deg);  
@@ -987,9 +1001,9 @@ button,
 .match .details .teams {
     justify-content: space-between;
     height: 32px;
-    margin-top: 0px;
+    margin: 0px;
     padding: 0 15px;
-    color: #a9adba;
+    color: #6a7391;
     font-size: 12px;
     font-weight: normal;
     color: #414755;
@@ -1052,19 +1066,19 @@ button,
 
 .app-detail h4 {
     font-size: 36px;
-    color: #5a627e;
+    color: #6a7391;
 }
 .app-detail h4 span {
     display: block;
     font-size: 14px;
-    color: #a9adba;
+    color: #6a7391;
     margin: 10px 0 30px;
 }
 .app-detail p {
     line-height: 1.6;
     margin-top: 20px;
     font-size: 14px;
-    color: #67718f;
+    color: #6a7391;
 }
 .ercode-box {
     margin: 30px 0 0;
@@ -1078,7 +1092,7 @@ button,
     background-image: url(../images/itembox-background-lighter@2x.png.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    color: #67718f;
+    color: #6a7391;
 }
 .ercode-box li h5 {
     margin-top: 10px;
@@ -1125,13 +1139,13 @@ button,
 .hot-games .right h3 {
     font-size: 60px;
     font-weight: 500;
-    color: #5a627e;
+    color: #6a7391;
     font-family: MicrosoftYaHei;
 }
 .hot-games .right h4 {    
     margin-top: 25px;
     font-size: 70px;
-    color: #d2b79c;
+    color: #d5b797;
     font-family: DINPro;
     white-space: nowrap;
 }
@@ -1139,7 +1153,7 @@ button,
     line-height: 1.6;
     margin-top: 20px;
     font-size: 14px;
-    color: #67718f;
+    color: #6a7391;
     font-family: MicrosoftYaHei;
 }
 .hot-games .right  li {
@@ -1232,7 +1246,7 @@ button,
 
 .hot-live .placeholder,
 .hot-live .videoBox {
-    background: #ece9e9;
+    background: #f7f3f3;
     border: none;
 }
 
@@ -1292,8 +1306,8 @@ button,
     box-sizing: border-box;
     text-align: center;
     font-size: 14px;
-    color: #d2b79c;
-    border: 1px solid #d2b79c;
+    color: #d5b797;
+    border: 1px solid #d5b797;
     text-decoration: none;
 }
 
@@ -1390,7 +1404,7 @@ button,
 
  
 .best-service {
-    margin-bottom: 100px!important;
+    margin-bottom: 50px!important;
 }
 .best-service .box {
     padding: 30px 35px;
@@ -1416,7 +1430,7 @@ button,
     line-height: 1.4;
     margin: 10px auto;
     font-size: 12px;
-    color: #67718f;
+    color: #6a7391;
 }
 .best-service .ico-plant{
     margin: 35px auto 0;
@@ -1450,15 +1464,16 @@ button,
 
 .best-service .bottom li h6 {
     font-weight: 700;
-    font-size: 16px;
-    color: #424a66;
+    font-size: 18px;
+    color: #414755;
+    font-family: MicrosoftYaHeiUI;
 }
 
 .best-service .bottom li p {
     line-height: 1.6;
     margin-top: 10px;
     font-size: 14px;
-    color: #a9adba;
+    color: #6a7391;
 }
 .best-service li .circle {
     color: #fff;
@@ -1802,6 +1817,7 @@ body {
     color: #ccc;
     border-right: 1px solid #ccc;
     padding: 0 20px;
+    transition: all ease .2s;
 }
 .nav-footer a:last-child {
     border-right: none;
