@@ -446,8 +446,8 @@ button,
 }
 
 #inner {
-  transition: transform 0.7s;
-  -webkit-transition: transform 0.7s;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
 }
 
 .banner {
