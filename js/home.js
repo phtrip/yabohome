@@ -134,7 +134,7 @@ function changImg(num) {
     }
 }
 function start() {
-    timer = setInterval('changImg("0")', 2500);
+    timer = setInterval('changImg("0")', 5000);
 }
 //鼠标离开之后 又要自动播放
 function reStart(num) {
