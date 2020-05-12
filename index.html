@@ -7,10 +7,11 @@
     <meta name="description" content=''>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>亚博体育</title>
-    <link rel="stylesheet" type="text/css" href="./css/home.css?v=2.0.2">
-    <link rel="stylesheet" type="text/css" href="./css/header.css?v=2.0">
-    <link rel="stylesheet" type="text/css" href="./css/animate.css">
-
+    <link rel="stylesheet" type="text/css" href="./css/home.css?v=0513">
+    <link rel="stylesheet" type="text/css" href="./css/header.css?v=0513">
+    <link rel="stylesheet" type="text/css" href="./css/animate.css?v=0513">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/> -->
+ 
 </head>
 <body>
     <div class="scroll-content">
@@ -418,7 +419,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="_2CXrHfdR-XzHrzst_XVXuD ">
+                <div class="_2CXrHfdR-XzHrzst_XVXuD menu-heying">
                     <div class="_30fLmyQ4rW1N-eVjuTIHFy">
                         <div class="_37maYIQnSlgwH-2DXPUN-">
                             <div class="_2em3T4zI2XT8J4JqO0eI83"></div>
@@ -470,6 +471,10 @@
                     <li><img src="./images/banner03.png"/></li>
                 </ul>
             </div>
+            <div class="btn-arrows">
+                <span class="btn-arrow-left"></span>
+                <span class="btn-arrow-right"></span>
+            </div>
         </div><!-- 轮播图 结束 -->
                 
         <div class="content">
@@ -478,8 +483,8 @@
                 <marquee class="marquee">尊敬的客户：亚博web端升级已完成，全新界面，心动体验，更多惊喜等您一一探索！</marquee>
                 <a href="" class="btn-more">更多</a>
             </div>
-            <section class="page partner">
-                <div class="title">
+            <section class="page partner animated fadeInUp" data-animation="fadeInUp">
+               <!--  <div class="title">
                     <div class="top">
                         <span class="left"></span>
                         <h2>
@@ -489,8 +494,8 @@
                         <span class="right"></span>                        
                     </div>
                     <p>亚博签约世界顶级赛事和球队</p>
-                </div>   
-                <div class="box">
+                </div>   --> 
+                <div class="box" animation="bottom-to-top" animation-time="900" animation-offset="0">
                     <ul class="partner-list">
                         <li>
                             <a href="https://www.manutd.com/zh/partners/global/yabo%20sports" target="_blank">
@@ -550,12 +555,12 @@
                     </div>
                     <p>提供精彩赛事的现场直播和动画直播</p>
                 </div>
-                <div class="box">
+                <div class="box" animation="bottom-to-top" animation-time="830">
                     <div class="btn-group">
                         <button data-type="Football" class="active"><i class="ico ico-ft"></i><label>足球</label></button>
                         <button data-type="Basketball"><i class="ico ico-bk"></i><label>篮球</label></button>
                     </div>
-                    <div class="match bg-common">
+                    <div class="match bg-common" animation="bottom-to-top" animation-time="830">
                         <h3>德国甲级联赛</h3>
                         <div class="box">
                             <div class="teams playing">
@@ -566,7 +571,7 @@
                             <div class="details">
                                 <div class="left-box">
                                     <div class="videoBox">
-                                        <iframe id="iframePlayer" width="100%" height="100%" scrolling="no" frameborder="0" allow="autoplay;fullscreen" allowfullscreen="" src=""></iframe>                                 
+                                        <iframe id="iframePlayer" width="100%" height="100%" scrolling="no" frameborder="0" allow="autoplay;fullscreen" allowfullscreen="" src="./videos/manchester_sponsor.mp4"></iframe>                                 
                                     </div>
                                     <div class="odds">
                                         <table>
@@ -625,20 +630,22 @@
                     </div>
                     <div class="app-detail bg-common">
                         <div class="list">
-                            <img src="./images/image-appdownload@2x.png.webp" class="left">
+                            <div class="left">
+                                <img src="./images/image-appdownload@2x.png.webp" animation="bottom-to-top" animation-time="900">
+                            </div>
                             <div class="right">
-                                <h4>
+                                <h4 animation="bottom-to-top" animation-time="800">
                                     亚博全站APP
                                     <span>COMPREHENSIVE APP DOWNLOAD</span>
                                 </h4>
-                                <p>全球首家一体化娱乐原生APP，尽显流畅，完美操作。海量体育，电竞顶尖赛事，真人娱乐，彩票投注及电子游艺等，最新最全娱乐项目尽在掌中体验扫码下载，即刻拥有！</p>
+                                <p animation="bottom-to-top" animation-time="900">全球首家一体化娱乐原生APP，尽显流畅，完美操作。海量体育，电竞顶尖赛事，真人娱乐，彩票投注及电子游艺等，最新最全娱乐项目尽在掌中体验扫码下载，即刻拥有！</p>
                                 <ul class="ercode-box">
-                                    <li>
+                                    <li animation="bottom-to-top" animation-time="900">
                                         <img src="./images/ercode-app.png" style="width:140px;height: 140px;background-color: #ccc;">
                                         <h5>扫码下载</h5>
                                         <h6>支持IOS&Android</h6>
                                     </li>
-                                    <li>
+                                    <li animation="bottom-to-top" animation-time="1000">
                                         <div class="domain-list">
                                             <a href="//www.yavip12.com" target="_blank">www.yavip12.com</a>
                                             <a href="//www.yavip12.com" target="_blank">www.yavip12.com</a>
@@ -696,7 +703,7 @@
                     </div>
                     <p>您想要的亚博都有。带给您丰富的游戏体验</p>
                 </div>
-                <div class="btn-group">
+                <div class="btn-group" animation="bottom-to-top" animation-time="800">
                     <button class="active"><i class="ico ico-ty"></i><label>体育</label></button>
                     <button><i class="ico ico-ag"></i><label>真人</label></button>
                     <button><i class="ico ico-qp"></i><label>棋牌</label></button>
@@ -707,13 +714,13 @@
                 <div class="box bg-common">
                     <div class="list"><!-- 体育赛事t -->
                         <div class="left">
-                            <img src="./images/image-slotgame@2x.png.webp">
+                            <img src="./images/image-slotgame@2x.png.webp" animation="bottom-to-top" animation-time="870">
                         </div>
                         <div class="right">
-                            <h3>体育赛事</h3>
-                            <h4>SPORTS EVENTS</h4>
-                            <p>业内最高赔率，覆盖世界各地赛事，让球、大小、半全场、波胆单双、总入球、连串过关等多元竞猜。更有动画直播、视频直播，让您轻松体验聊球投注，乐在其中。</p>
-                            <ul>
+                            <h3 animation="bottom-to-top" animation-time="870">体育赛事</h3>
+                            <h4 animation="bottom-to-top" animation-time="880">SPORTS EVENTS</h4>
+                            <p animation="bottom-to-top" animation-time="890">业内最高赔率，覆盖世界各地赛事，让球、大小、半全场、波胆单双、总入球、连串过关等多元竞猜。更有动画直播、视频直播，让您轻松体验聊球投注，乐在其中。</p>
+                            <ul animation="bottom-to-top" animation-time="900">
                                 <li><i class="ybty"></i><p>亚博体育</p></li>
                                 <li><i class="imty"></i><p>IM体育</p></li>
                             </ul>
@@ -825,7 +832,7 @@
                 <div class="box bg-common">
                     <div id="canvas">
                         <ul class="top">
-                            <li>
+                            <li animation="bottom-to-top" animation-time="870">
                                 <div class="circle" id="circles-1"></div>
                                 <div class="bottom">
                                     <div class="ico-plant">
@@ -835,7 +842,7 @@
                                     <h6>AVERAGE<br>DEPOSIT TIME</h6>
                                 </div>
                             </li>
-                            <li>
+                            <li animation="bottom-to-top" animation-time="800">
                                 <div class="circle" id="circles-2"></div>
                                 <div class="bottom">
                                     <div class="ico-plant">
@@ -845,7 +852,7 @@
                                     <h6>PAYMENT PLATFORM<br>COOPERATIVES</h6>
                                 </div>
                             </li>
-                            <li>
+                            <li animation="bottom-to-top" animation-time="810">
                                 <div class="circle" id="circles-3"></div>
                                 <div class="bottom">
                                     <div class="ico-plant">
@@ -855,7 +862,7 @@
                                     <h6>AVERAGE<br>WITHDRAWAL TIME</h6>
                                 </div>
                             </li>
-                            <li>
+                            <li animation="bottom-to-top" animation-time="870">
                                 <div class="circle" id="circles-4"></div>
                                 <div class="bottom">
                                     <div class="ico-plant">
@@ -868,28 +875,28 @@
                         </ul>
                     </div>
                     <ul class="bottom">
-                        <li>
+                        <li animation="bottom-to-top" animation-time="810">
                             <div class="img"><img src="./images/icon-fast-payment@2x.png.webp"></div>
                             <div class="text">
                                 <h6>极速存取转款</h6>
                                 <p>最新技术自主研发的财务处理系统真正做到极速存、取、转独家网络优化技术，为您提供一流的游戏体验，最大优化网络延迟。</p>
                             </div>
                         </li>
-                        <li>
+                        <li animation="bottom-to-top" animation-time="830">
                             <div class="img"><img src="./images/icon-quantity-games@2x.png.webp"></div>
                             <div class="text">
                                 <h6>海量赛事种类</h6>
                                 <p>每天为您提供近千场精彩体育赛事，更有真人、彩票、电子游戏等多种娱乐方式选择，让您拥有完美游戏体验。</p>
                             </div>
                         </li>
-                        <li>
+                        <li animation="bottom-to-top" animation-time="850">
                             <div class="img"><img src="./images/icon-safe-security@2x.png.webp"></div>
                             <div class="text">
                                 <h6>加密安全管理</h6>
                                 <p>独家开发，采用128位加密技术和严格的安全管理体系，客户资金得到最完善的保障，让您全情尽享娱乐、赛事投注、无后顾之忧！</p>
                             </div>
                         </li>
-                        <li>
+                        <li animation="bottom-to-top" animation-time="870">
                             <div class="img"><img src="./images/icon-all-platform@2x.png.webp"></div>
                             <div class="text">
                                 <h6>三端任您选择</h6>
@@ -963,9 +970,7 @@
                 <li>
                     <i></i>
                     <div class="box">
-                        <a href="">主线客服</a>
-                        <p class="line"></p>
-                        <a href="">次线客服</a>
+                        <a href="">在线客服</a>
                     </div>
                 </li>
                 <li>
@@ -1045,8 +1050,7 @@
     </div>
 
     <script src="./js/jquery.min.js" type="text/javascript"></script>
-    <script src="./js/lib.js" type="text/javascript"></script>
-    <script src="./js/home.js?v=2.0.0" type="text/javascript"></script>
-
+    <script src="./js/lib.js?v=0513" type="text/javascript"></script>
+    <script src="./js/home.js?v=0513" type="text/javascript"></script>
 </body>
 </html>

@@ -102,14 +102,39 @@ tick();
 
 // =============banner 轮播================================
 $(function() {
-    $(".btnnum").hover(function(){
+    $(".btnnum, .btn-arrows span").hover(function(){
         clearInterval(timer);
     },function(){
         start();
     })
-    $(".btnnum li").on("click", function(){
+    $(".btnnum li").on("click", function(){ // 翻页
         index=$(this).index();
         changImg(index)
+    });
+    $(".btn-arrow-left").on("click", function(){ // 左翻页
+        if ($(this).hasClass('closed')) {
+            return false;
+        }
+        $(".btnnum li").each(function(i){
+            if ($(this).hasClass('current')) {
+                index = i - 1
+            }
+        })
+        changImg(index)
+    });
+    $(".btn-arrow-right").on("click", function(){ // 左翻页
+        if ($(this).hasClass('closed')) {
+            return false;
+        }
+        var nextId = 1;
+        $(".btnnum li").each(function(j){
+            if ($(this).hasClass('current')) {
+                nextId = j + 1
+            }
+        })
+        if (nextId <= $(".btnnum li").length - 1) {
+            changImg(nextId)
+        }
     });
 });
 var index = 0;
@@ -124,17 +149,27 @@ function init() {
 
 //图片轮播
 function changImg(num) {
-    var len = $('.banList li').length; //获取图片有多少张
+    var len = $('.banList li').length; //获取图片有多少张1
     $('.banList li').eq(index).addClass('bannershow banneropacity').siblings().removeClass('bannershow banneropacity');
-    $('.btnnum li').eq(index).addClass("current active").siblings().removeClass("current active");
+    $('.btnnum li').eq(index).addClass("current").siblings().removeClass("current");
     $(".banList li").eq(index-1).addClass('finished').siblings().removeClass("finished");
     index++;
     if (index == $('.banList li').length) { //最后一张
+        $(".btn-arrow-left").addClass("closed");
         index = 0; //第一张
+    }
+    if (num === 0) {
+        $(".btn-arrow-left").addClass("closed");   
+        $(".btn-arrow-right").removeClass("closed");  
+    } else if (num == $('.banList li').length -1 ) {
+        $(".btn-arrow-right").addClass("closed"); 
+        $(".btn-arrow-left").removeClass("closed");  
+    } else {
+        $(".btn-arrows span").removeClass("closed");
     }
 }
 function start() {
-    timer = setInterval('changImg("0")', 5000);
+    timer = setInterval('changImg("0", "next")', 5000);
 }
 //鼠标离开之后 又要自动播放
 function reStart(num) {
@@ -142,7 +177,6 @@ function reStart(num) {
     changImg(num);
     start();
 }
-
 // ========================END===============================
 
 // ==========circle process==================================
@@ -213,6 +247,12 @@ window.onmousewheel = function (e) {
 // ========================END===============================
 
 $(function() {
+    $(window).scroll(function(){
+        if($(window).scrollTop() <= 10){
+             $('[animation]').removeAttr("style");
+            initEasyMotion()            
+        }
+    });
     // init();
     changImg(); //解决第一次第一张到第二张的时间间隔
     start();
@@ -276,14 +316,12 @@ $(function() {
         height: 80,
         text: "https://www.yb73.app"
     });
-    // 懒加载
-    $(function() {
-        $("img").lazyload();
-    });
 })
 
 // 球初始化
 luxy.init();
+// 特效初始化
+initEasyMotion()
 var api = 'https://www.yabovip2019.com';
 var api2 = 'http://videos.1ky5dz.com';
 var appKey = 'c97823e281c071c39e';
@@ -327,13 +365,21 @@ function getFootbasketPlayingData () {
                 res.data.team1_logo = './images/team_logo.png.webp'
                 res.data.team2_logo = './images/team_logo.png.webp'
             }
-            liveStr += '<p>'+
+            if (res.data.team1 !== '') { // 无赛事
+                $(".match .teams").removeClass('no-playing');
+                liveStr += '<p>'+
                             '<label>'+ res.data.team1 +'</label>'+
                             '<img src="'+res.data.team1_logo+'">'+
                         '</p>'+
                         '<p class="score">'+ res.data.score +'</p>'+
                         '<p><img src="'+res.data.team2_logo+'">'+ res.data.team2 +'</p>';
-            $(".match h3").text(res.data.league);
+                $(".match h3").text(res.data.league);
+            } else {
+                $(".match h3").text('赞助专题');
+                $(".match .teams").addClass('no-playing');
+                liveStr += '<p class="cQ_ch">意大利甲级联赛</p>'+
+                            '<p class="cQ_cj">全球赞助商</p>';                
+            }
             $(".match .playing p").remove();
             $(".match .playing").html(liveStr);
         } else {

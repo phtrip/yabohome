@@ -51,5 +51,64 @@ correctLevel:2,background:"#ffffff",foreground:"#000000"},h);return this.each(fu
 j=Math.ceil((f+1)*b)-Math.floor(f*b);d.fillRect(Math.round(i*b),Math.round(f*e),g,j)}}else{a=new o(h.typeNumber,h.correctLevel);a.addData(h.text);a.make();c=r("<table></table>").css("width",h.width+"px").css("height",h.height+"px").css("border","0px").css("border-collapse","collapse").css("background-color",h.background);d=h.width/a.getModuleCount();b=h.height/a.getModuleCount();for(e=0;e<a.getModuleCount();e++){f=r("<tr></tr>").css("height",b+"px").appendTo(c);for(i=0;i<a.getModuleCount();i++)r("<td></td>").css("width",
 d+"px").css("background-color",a.isDark(e,i)?h.foreground:h.background).appendTo(f)}}a=c;jQuery(a).appendTo(this)})}})(jQuery);
 
-/*! Lazy Load 1.9.3 - MIT license - Copyright 2010-2013 Mika Tuupola */
-!function(a,b,c,d){var e=a(b);a.fn.lazyload=function(f){function g(){var b=0;i.each(function(){var c=a(this);if(!j.skip_invisible||c.is(":visible"))if(a.abovethetop(this,j)||a.leftofbegin(this,j));else if(a.belowthefold(this,j)||a.rightoffold(this,j)){if(++b>j.failure_limit)return!1}else c.trigger("appear"),b=0})}var h,i=this,j={threshold:0,failure_limit:0,event:"scroll",effect:"show",container:b,data_attribute:"original",skip_invisible:!0,appear:null,load:null,placeholder:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"};return f&&(d!==f.failurelimit&&(f.failure_limit=f.failurelimit,delete f.failurelimit),d!==f.effectspeed&&(f.effect_speed=f.effectspeed,delete f.effectspeed),a.extend(j,f)),h=j.container===d||j.container===b?e:a(j.container),0===j.event.indexOf("scroll")&&h.bind(j.event,function(){return g()}),this.each(function(){var b=this,c=a(b);b.loaded=!1,(c.attr("src")===d||c.attr("src")===!1)&&c.is("img")&&c.attr("src",j.placeholder),c.one("appear",function(){if(!this.loaded){if(j.appear){var d=i.length;j.appear.call(b,d,j)}a("<img />").bind("load",function(){var d=c.attr("data-"+j.data_attribute);c.hide(),c.is("img")?c.attr("src",d):c.css("background-image","url('"+d+"')"),c[j.effect](j.effect_speed),b.loaded=!0;var e=a.grep(i,function(a){return!a.loaded});if(i=a(e),j.load){var f=i.length;j.load.call(b,f,j)}}).attr("src",c.attr("data-"+j.data_attribute))}}),0!==j.event.indexOf("scroll")&&c.bind(j.event,function(){b.loaded||c.trigger("appear")})}),e.bind("resize",function(){g()}),/(?:iphone|ipod|ipad).*os 5/gi.test(navigator.appVersion)&&e.bind("pageshow",function(b){b.originalEvent&&b.originalEvent.persisted&&i.each(function(){a(this).trigger("appear")})}),a(c).ready(function(){g()}),this},a.belowthefold=function(c,f){var g;return g=f.container===d||f.container===b?(b.innerHeight?b.innerHeight:e.height())+e.scrollTop():a(f.container).offset().top+a(f.container).height(),g<=a(c).offset().top-f.threshold},a.rightoffold=function(c,f){var g;return g=f.container===d||f.container===b?e.width()+e.scrollLeft():a(f.container).offset().left+a(f.container).width(),g<=a(c).offset().left-f.threshold},a.abovethetop=function(c,f){var g;return g=f.container===d||f.container===b?e.scrollTop():a(f.container).offset().top,g>=a(c).offset().top+f.threshold+a(c).height()},a.leftofbegin=function(c,f){var g;return g=f.container===d||f.container===b?e.scrollLeft():a(f.container).offset().left,g>=a(c).offset().left+f.threshold+a(c).width()},a.inviewport=function(b,c){return!(a.rightoffold(b,c)||a.leftofbegin(b,c)||a.belowthefold(b,c)||a.abovethetop(b,c))},a.extend(a.expr[":"],{"below-the-fold":function(b){return a.belowthefold(b,{threshold:0})},"above-the-top":function(b){return!a.belowthefold(b,{threshold:0})},"right-of-screen":function(b){return a.rightoffold(b,{threshold:0})},"left-of-screen":function(b){return!a.rightoffold(b,{threshold:0})},"in-viewport":function(b){return a.inviewport(b,{threshold:0})},"above-the-fold":function(b){return!a.belowthefold(b,{threshold:0})},"right-of-fold":function(b){return a.rightoffold(b,{threshold:0})},"left-of-fold":function(b){return!a.rightoffold(b,{threshold:0})}})}(jQuery,window,document);
+/* easymotion*/
+function initEasyMotion () {
+    var $ = $ || jQuery;
+    if (!$) {
+        return;
+    }
+    var map = {
+        "fade": null,
+        "left-to-right": "translateX(-100px)",
+        "right-to-left": "translateX(100px)",
+        "bottom-to-top": "translateY(300px)",
+        "top-to-bottom": "translateY(-300px)",
+        "rotate": "rotate(-720deg)",
+        "rotate-c": "rotate(720deg)",
+        "scale": "scale(.01)",
+        "scale-rotate": "rotate(-720deg) scale(.01)"
+    };
+    
+    var time;
+
+    $('[animation]').each(function(){
+        time = '1s';
+        var eachElem = $(this);
+        
+        if (eachElem.attr("animation-time")) { 
+            time = +eachElem.attr("animation-time") / 1000 + 's';   // Animation effect time
+        }
+        
+        eachElem.css({'opacity':'0'});      
+        var elementPosition = eachElem.offset().top;
+        var animationAttr = eachElem.attr("animation");
+        var action = map[animationAttr];
+        if (typeof action == 'undefined') {
+            
+        } else if (action == null) {
+            eachElem.css({'transition': time});    
+        } else {
+            eachElem.css({'-ms-transform':action, '-webkit-transform':action, '-moz-transform':action, '-o-transform':action, 'transform':action, 'transition': time});    
+        }
+        if ($(window).height() + $(window).scrollTop() > elementPosition) {
+             setTimeout(
+                function() {
+                    eachElem.css({'-ms-transform':'initial', '-webkit-transform':'initial', '-moz-transform':'initial', '-o-transform':'initial', 'transform':'initial', 'opacity':'1'});
+                }, 700);
+         } else {
+            var onScroll = function() {
+                var delta = 20;
+                if (eachElem.attr("animation-offset")) { 
+                    delta = +eachElem.attr("animation-offset");     // Scroll offset to display element
+                }
+                if (($(window).height() + $(this).scrollTop()) > (elementPosition + delta)) {
+                        // console.log('delta: ' + delta);
+                     eachElem.css({'opacity':'1', '-ms-transform':'initial', '-webkit-transform':'initial', '-moz-transform':'initial', '-o-transform':'initial', 'transform':'initial'});
+                     // $(window).off('scroll', onScroll);
+                }
+            };
+            
+            $(window).on('scroll', onScroll);
+        }
+    });
+}

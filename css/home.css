@@ -491,6 +491,7 @@ button,
     cursor: pointer;
     bottom: 20px;
     left: 0;
+    z-index: 3;
 }
 
 .btnnum ul {
@@ -552,6 +553,48 @@ button,
 .btnnum .current{
     background: url(../images/dot-active@2x.png.webp);
     background-size: 100% 100%;
+}
+.btn-arrows {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+    width: calc(100% - 200px);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    margin: 0 0 0 -600px;
+    /*opacity: 0;*/
+}
+.banList:hover .btn-arrows {
+    opacity: 1;
+}
+.btn-arrows span {
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    width: 54px;
+    height: 100px;
+    opacity: 0.5;
+    transition: all ease .2s;
+}
+.btn-arrow-left {
+    background: url(../images/left_arrow_hover.png.webp) no-repeat;
+    background-size: contain;
+    left: 0;
+}
+.btn-arrow-right {
+    background: url(../images/right_arrow_hover.png.webp) no-repeat;
+    background-size: contain;
+    right: 0;
+}
+.btn-arrows span:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+.btn-arrows span.closed {
+    opacity: 0.2;
+    cursor: not-allowed;
 }
 .banner .arrow{
     height: 60px;
@@ -1175,8 +1218,12 @@ button,
 .app-download .app-detail {
     height: 590px;
     z-index: 1;    
+    margin-top: 10px;
 }
-
+.app-download .app-detail img {
+    width: 748px;
+    height: 595px;
+}
 .hot-games .box {
     height: 480px;
     z-index: 1;    
@@ -1824,4 +1871,48 @@ body {
 }
 .nav-footer a:hover {
     color: #fff;
+}
+.cQ_cj {
+    line-height: 20px;
+    font-size: 14px;
+    color: #6a7391;
+    margin-top: 4px;
+    text-align: center;
+    font-weight: normal;
+    display: block;
+}
+.cQ_ch {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #6a7391;
+    font-weight: normal;
+    display: block;
+}
+.no-playing {
+    display: block!important;
+    text-align: left!important;
+    margin-left: -310px!important;
+}
+
+
+
+[data-animation].animated {
+    opacity: 1;
+}
+[data-animation] {
+    opacity: 0;
+}
+
+.fast {
+    -vendor-animation-duration: .2s;
+    -vendor-animation-delay: 0s;
+}
+.slow {
+    -vendor-animation-duration: .5s;
+    -vendor-animation-delay: .4s;
+}
+.reallyslow {
+    -vendor-animation-duration: 8s;
+    -vendor-animation-delay: .4s;
 }

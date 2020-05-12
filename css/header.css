@@ -1460,8 +1460,10 @@
 .webpa ._30fLmyQ4rW1N-eVjuTIHFy ._2em3T4zI2XT8J4JqO0eI83 {
 	background-image: url(../images/image-a.png.webp)
 }
-
-._30fLmyQ4rW1N-eVjuTIHFy ._2em3T4zI2XT8J4JqO0eI83:hover {
+.menu-heying ._30fLmyQ4rW1N-eVjuTIHFy {
+	transition: all .2s
+}
+.menu-heying ._30fLmyQ4rW1N-eVjuTIHFy:hover {
 	transform: scale(1.03)
 }
 

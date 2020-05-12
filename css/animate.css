@@ -1,4 +1,9 @@
- 
+ .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
 
 @-ms-keyframes zoonInYb {
   0% {
