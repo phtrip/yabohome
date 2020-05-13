@@ -264,7 +264,7 @@ $(function() {
     });
     $("body").niceScroll({
         cursorcolor: "#d7b18a",
-        cursorwidth: "12px",
+        cursorwidth: "8px",
         touchbehavior: true,
     });
      // tab切换

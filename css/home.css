@@ -564,9 +564,10 @@ button,
     left: 50%;
     z-index: 1;
     margin: 0 0 0 -600px;
-    /*opacity: 0;*/
+    opacity: 0;
+    transition: all ease .2s;
 }
-.banList:hover .btn-arrows {
+.banner:hover .btn-arrows {
     opacity: 1;
 }
 .btn-arrows span {
@@ -581,12 +582,12 @@ button,
 .btn-arrow-left {
     background: url(../images/left_arrow_hover.png.webp) no-repeat;
     background-size: contain;
-    left: 0;
+    left: -54px;
 }
 .btn-arrow-right {
     background: url(../images/right_arrow_hover.png.webp) no-repeat;
     background-size: contain;
-    right: 0;
+    right: -54px;
 }
 .btn-arrows span:hover {
     cursor: pointer;
