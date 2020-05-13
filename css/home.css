@@ -1268,8 +1268,10 @@ button,
     animation: _1m1bJEXvE1kWIE5edHfxc2 .4s ease-out forwards!important;
 }
 
-
-
+.partner-list {
+    -webkit-animation: fadeInUpMy .6s ease forwards;
+    animation: fadeInUpMy .6s ease forwards;
+}
 
 
 
