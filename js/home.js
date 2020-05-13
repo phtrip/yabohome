@@ -270,8 +270,8 @@ $(function() {
     start();
      // 滚动条初始化
     $(".hot-live .details ul").niceScroll({
-        cursorcolor: "#d7b18a",
-        cursorwidth: "8px",
+        cursorcolor: "#ececec",
+        cursorwidth: "1px",
         touchbehavior: true,
     });
     $("body").niceScroll({

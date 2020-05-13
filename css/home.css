@@ -862,6 +862,10 @@ button,
     text-align: center;
     justify-content: space-between;
 }
+.match .details .right {
+    max-height: 500px;
+    overflow: hidden;
+}
 .details .left-box {
     width: 720px;
 }
