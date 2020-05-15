@@ -148,7 +148,7 @@ box.onmouseout=function(){can=true};
 new function (){
 var stop=box.scrollTop%40==0&&!can;
 if(!stop)box.scrollTop==parseInt(box.scrollHeight/2)?box.scrollTop=0:box.scrollTop++;
-setTimeout(arguments.callee,box.scrollTop%40?10:1500);
+setTimeout(arguments.callee,box.scrollTop%40?10:3000);
 };
 // ========================END===============================
 
