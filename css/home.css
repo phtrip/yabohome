@@ -452,7 +452,7 @@ button,
 
 .banner {
     width: 1400px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     height: 600px;
     z-index: 99;
     margin: 104px auto 0;
@@ -558,12 +558,12 @@ button,
     display: flex;
     justify-content: space-between;
     height: 600px;
-    width: calc(100% - 200px);
+    width: 100%;
     position: absolute;
     top: 0;
     left: 50%;
     z-index: 1;
-    margin: 0 0 0 -600px;
+    margin: 0 0 0 -700px;
     opacity: 0;
     transition: all ease .2s;
 }
@@ -1925,4 +1925,14 @@ body {
 .reallyslow {
     -vendor-animation-duration: 8s;
     -vendor-animation-delay: .4s;
+}
+
+
+@media screen and (max-width: 1500px) {
+    .btn-arrow-left {
+        left: 0;
+    }
+    .btn-arrow-right {
+        right: 0;
+    }
 }

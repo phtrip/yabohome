@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="273" height="25" viewBox="0 0 273 25">
+    <defs>
+        <linearGradient id="prefix__a" x1="50%" x2="50%" y1="0%" y2="88.445%">
+            <stop offset="0%" stop-color="#67749B"/>
+            <stop offset="100%" stop-color="#434A63"/>
+        </linearGradient>
+        <linearGradient id="prefix__b" x1="50%" x2="50%" y1="0%" y2="88.445%">
+            <stop offset="0%" stop-color="#67749B"/>
+            <stop offset="100%" stop-color="#434A63"/>
+        </linearGradient>
+        <linearGradient id="prefix__c" x1="83.32%" x2="19.917%" y1="51.763%" y2="38.409%">
+            <stop offset="0%" stop-color="#FFF" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#FFF"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="url(#prefix__a)" d="M0 0L273 0 254.548 25 18.452 25z"/>
+        <path fill="url(#prefix__b)" d="M1 0L37 25 18.411 25z"/>
+        <path fill="url(#prefix__b)" d="M236 0L272 25 253.411 25z" transform="matrix(-1 0 0 1 508 0)"/>
+        <path fill="url(#prefix__c)" d="M7 1L26.661 14 34 1z" opacity=".5"/>
+        <path fill="url(#prefix__c)" d="M237 1L256.661 14 264 1z" opacity=".5" transform="matrix(-1 0 0 1 501 0)"/>
+    </g>
+</svg>
