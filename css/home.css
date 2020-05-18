@@ -178,7 +178,7 @@ button,
 .float-right {
     position: fixed;
     z-index: 100;
-    top: 35%;
+    top: 50%;
     right: 0;
     width: 48px;
     height: 154px;
