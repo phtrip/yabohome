@@ -1,6 +1,6 @@
 
 // =============banner hover================================
-(function() {
+/*(function() {
   var container = document.getElementById("container"),
       inner = document.getElementById("inner");
   var mouse = {
@@ -64,7 +64,7 @@
   container.onmousemove = onMouseMoveHandler;
   container.onmouseleave = onMouseLeaveHandler;
   container.onmouseenter = onMouseEnterHandler;
-})();
+})();*/
 // ========================END===============================
 
 // =============banner 轮播================================
@@ -231,6 +231,11 @@ $(function() {
              $('[animation]').removeAttr("style");
             initEasyMotion()            
         }
+        if($(window).scrollTop() > 300){
+            $(".backTop").show()
+        } else {
+            $(".backTop").hide()
+        }
     });
     // init();
     changImg(); //解决第一次第一张到第二张的时间间隔
@@ -246,15 +251,30 @@ $(function() {
         cursorwidth: "8px",
         touchbehavior: true,
     });
-     // tab切换
-    $('.btn-group button').on("click", function() {
+     // APP下载 tab切换
+    $('.app-download .btn-group button').on("click", function() {
         var cur=$(this).index();
         $(this).addClass('active').siblings().removeClass('active');
         $(this).parent().next('.bg-common').find('.list').eq(cur).removeClass('_1addy6uf1nYJgRM1OlApnv').siblings().addClass('_1addy6uf1nYJgRM1OlApnv');
     });
+     // 鸭脖游戏 tab切换
+    $('.hot-games .btn-group button').on("click", function() {
+        var cur=$(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $(this).parent().prev('.bg-common').find('.list').eq(cur).removeClass('_1addy6uf1nYJgRM1OlApnv').siblings().addClass('_1addy6uf1nYJgRM1OlApnv');
+    });
      // 直播数据切换
     $('.hot-live .btn-group button').on("click", function() {
+        $(this).addClass('active').siblings().removeClass('active');
         weblist($(this).attr("data-type"));
+    });
+     // 返回顶部
+    $('.backTop').on("click", function() {
+        $('body,html').animate({
+          scrollTop: 0
+        },
+        500);
+        return false;
     });
     $("body").getNiceScroll(0).scrollend(function(e) {
         onScroll()

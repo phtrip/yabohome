@@ -43,6 +43,12 @@ body {
 }
 
 
+
+
+
+
+.foot-partner ul,
+.match .details .left-box .teams p,
 .foot-top .main,
 .details .odds ul,
 .page .title h2 p,
@@ -134,9 +140,10 @@ button,
     width: 28px;
     height: 28px;   
     display: block;
-    background:  url('../images/sprite-btn.png.webp');
+    /*background:  url('../images/sprite-btn.png.webp');*/
     background-repeat: no-repeat;
-    background-size: 530px 44px;
+    background-position: center;
+    /*background-size: 530px 44px;*/
     margin-right: 14px;
 }
 .btn-group button .ico,
@@ -151,11 +158,6 @@ button,
 
 /*按钮*/
 .btn-group .active .ico {
-    width: 44px;
-    height: 44px;
-    margin-right: 4px;
-    position: relative;
-    top: 4px;
     animation: zoonInBtn .35s ease-out;
 }
 
@@ -174,52 +176,59 @@ button,
     z-index: 100;
     top: 50%;
     right: 0;
-    width: 48px;
-    height: 154px;
-    margin-top: -77px;
-    border-radius: 14px 0 0 14px;
-    box-shadow: 0 3px 5px 0 hsla(0,0%,70.2%,.5);
-    background-color: #fff;
+    margin-top: -81px;
 }
 .float-right li {
-    width: 100%;
-    height: 51px;
+    width: 54px;
+    height: 54px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
     transition: all .2s ease;
     position: relative;
-}
-.float-right li i {
-    display: block;
-    width: 28px;
-    height: 28px;
-    background-image: url(../images/sprite-right.png.webp);
     background-repeat: no-repeat;
-    background-size: 178px 28px;
+    background-size: contain;
+}
+ 
+.float-right li:nth-child(1) {
+    background-image: url(../images/ico-help.png);
+}
+.float-right li:nth-child(2) {
+    background-image: url(../images/ico-kefu.png);
+}
+.float-right li:nth-child(3) {
+    background-image: url(../images/ico-app.png);
+}
+.float-right li:nth-child(1):hover {
+    background-image: url(../images/ico-help-active.png);
+}
+.float-right li:nth-child(2):hover {
+    background-image: url(../images/ico-kefu-active.png);
+}
+.float-right li:nth-child(3):hover {
+    background-image: url(../images/ico-app-active.png);
+}
+.backTop {
+    width: 54px;
+    height: 54px;
+    background-image: url(../images/ico-toTop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    z-index: 999;
     cursor: pointer;
+    display: none;
 }
-.float-right li:nth-child(1) i {
-    background-position: -120px 0px;
-}
-.float-right li:nth-child(2) i {
-    background-position: -90px 0px;    
-}
-.float-right li:nth-child(3) i {
-    background-position: -150px 0px;    
-}
-.float-right li:nth-child(1):hover i {
-    background-position: -30px 0px;
-}
-.float-right li:nth-child(2):hover i {
-    background-position: 0 0px;    
-}
-.float-right li:nth-child(3):hover i {
-    background-position: -60px 0px;    
+.backTop:hover {
+    background-image: url(../images/ico-toTop-active.png);
+    background-size: contain;
 }
 .float-right li .box {
     position: absolute;
-    left: 50px;
+    left: 100px;
     top: 0;
     box-sizing: border-box;
     color: rgba(0,0,0,.65);
@@ -481,7 +490,6 @@ button,
     margin: 0 auto;
 }
 .banner img {
-    margin-left: -260px;
     height: 860px;
 }
 .btn-arrows {
@@ -492,7 +500,7 @@ button,
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 999;
     transition: all ease .2s;
 }
 .banner:hover .btn-arrows {
@@ -522,6 +530,43 @@ button,
 .btn-arrows span.closed {
     cursor: not-allowed;
 }
+
+.btn-arrows .preview {
+    position: absolute;
+    width: 202px;
+    height: 90px;
+    opacity: 0.9;
+    padding: 8px;
+    background-color: #22252d;
+    transition: all ease .2s;
+}
+.btn-arrow-left .preview {
+    left: 0;
+    opacity: 0;
+}
+.btn-arrow-right .preview {
+    right: 0;
+    opacity: 0;
+}
+.btn-arrow-left:hover .preview {
+    opacity: 0.9;
+    left: 50px;
+}
+.btn-arrow-right:hover .preview {
+    opacity: 0.9;
+    right: 50px;
+}
+
+.btn-arrows .preview img {
+    width: 186px;
+    height: 51px;
+}
+.btn-arrows .preview p {
+    color: #fff;
+    text-align: left;  
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+}
 .banner .arrow{
     height: 60px;
     width: 30px;
@@ -545,7 +590,7 @@ button,
 .banner-info {
     position: absolute;
     bottom: 0;
-    z-index: 38;
+    z-index: 999;
     left: 50%;
     margin-left: -600px;
 }
@@ -597,7 +642,10 @@ button,
 }
 .page .title {
     text-align: left;
-    margin-top: 80px;
+    padding-top: 80px;
+}
+.hot-games .title {
+    padding-top: 0;
 }
 .page .title p {
     font-family: MicrosoftYaHei;
@@ -666,7 +714,7 @@ button,
     margin: 0 auto;
 }
 .partner-list {
-    margin: 18px 0 30px 0;
+    margin:18px 0 0 0;
     justify-content: space-between;
 }
 
@@ -722,27 +770,37 @@ button,
     font-size: 14px;    
     width: 100%;
     height: 100%;
-    background: url(../images/button-sponsor-large-198.svg) no-repeat;
+    background: url(../images/bg-zanzhu.png) no-repeat;
     background-size: contain;
 }
 .btn-group {
     text-align: right;
 }
 
+.app-download {
+    position: relative;
+}
 .hot-live .btn-group {
     position: absolute;
     right: 0;
     top: -135px;
 }
  
+.app-download .btn-group {
+    position: absolute;
+    right: 0;
+    top: 140px;
+}
+
 .best-service .box,
 .app-detail,
 .match .box,
 .bg-common {
     position: relative;
 }
+.hot-games .bg-common,
 .hot-live .bg-common  {
-    background: url(../images/itembox-background-central@2x.png.webp);
+    background: url(../images/bg-box_mid.png) no-repeat;
     background-position: 0 -24px;
     background-size: 100% 100%;
     position: relative;
@@ -750,43 +808,35 @@ button,
 .bg-common {
     margin-top: 60px;
 }
-.bg-common:before {
-}
+
 .bg-common:after {
-    bottom: -20px;
+    bottom: -50px;
 }
 
-.hot-live .match .box:before,
-.hot-live .match .box:after,
-.hot-live .bg-common:before,
+.hot-games .bg-common:before, 
+.hot-games .bg-common:after,
+.hot-live .bg-common:before, 
 .hot-live .bg-common:after {
-    background: url(../images/image-frame-setoff-01.svg) no-repeat;
-    background-size: 100%;  
     content: '';
     display: block;
     position: absolute;
-    width: 110px;
+    width: 100%;
     height: 116px;
     left: 0;
 }
+.hot-games .bg-common:before,
+.hot-live .bg-common:before {
+    background: url(../images/bg-box_top.png) no-repeat;
+    background-size: 100%;
+    top: -50px;
+}
+.hot-games .bg-common:after,
 .hot-live .bg-common:after {
-    left: auto;
-    right: 0;
-    top: 0;
-    transform: rotate(90deg);
+    background: url(../images/bg-box_bottom.png) no-repeat;
+    background-size: 100%;
+    border-radius: 0 0 20px 20px;
+    background-position: 0 -15px;
 }
-
-.hot-live .match .box:before {
-    bottom: 0;
-    transform: rotate(-90deg);
-}
-.hot-live .match .box:after {
-    left: auto;
-    right: 0;
-    bottom: 0;
-    transform:rotate(-180deg);
-}
-
 .match .teams {
     justify-content: flex-start;
     height: 50px;
@@ -823,7 +873,7 @@ button,
     justify-content: space-between;
 }
 .match .details .right {
-    max-height: 500px;
+    max-height: 550px;
     overflow: hidden;
 }
 .details .left-box {
@@ -905,7 +955,7 @@ button,
 .match .details .right ul {
     width: 370px;
     padding-right: 10px;
-    height: 500px;
+    height: 560px;
 }
 .match .details .right ul::-webkit-scrollbar {
   /*滚动条整体样式*/
@@ -1012,26 +1062,102 @@ button,
 }
 
 
-
+.hot-games {
+    position: relative;
+}
 
 .hot-games .btn-group {
-    margin: 40px 0 0;
     justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    left: 0;
+    z-index: 6;
+}
+.hot-games .list {
+    top: -90px;
+}
+.hot-games .btn-group button {
+    width: 194px;
+    height: 68px;    
+    border: 1px solid #d9ddf2;
+    margin: 0;
+    background: url(../images/btn-game-mid.png);
+    background-repeat: no-repeat;
+}
+.hot-games .btn-group button:first-child {
+    background: url(../images/btn-game-left.png);
+    background-repeat: no-repeat;    
+    border: none;
+}
+.hot-games .btn-group button:last-child {
+    background: url(../images/btn-game-right.png);
+    background-repeat: no-repeat;    
+    border: none;
+}
+.hot-games .btn-group button:first-child.active {
+    background: url(../images/btn-game-left-active.png);
+    background-repeat: no-repeat;    
+}
+.hot-games .btn-group button:last-child.active {
+    background: url(../images/btn-game-right-active.png);
+    background-repeat: no-repeat;    
+}
+.hot-games .btn-group button.active {
+    background: url(../images/btn-game-mid-active.png);
+    background-repeat: no-repeat;
 }
 .match .details .teams {
     justify-content: space-between;
-    height: 32px;
     margin: 0px;
     padding: 0 15px;
     font-size: 12px;
     font-weight: normal;
     color: #878ea6;
 }
-.match .details .teams p {
-    width: 145px;    
+.match .details .left-box .teams {
+    justify-content: center;
+    padding: 0;
+    align-items: flex-end;
+}
+.match .details .left-box .teams p {
+    color: #fff;
+    font-size: 14px;
+    height: 48px;
+}
+.match .details .left-box .teams img {
+    width: 35px;
+    height: 35px;
+    margin: 0 20px;
+}
+.match .details .left-box .teams .score {
+    font-family: DIN;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    width: 141px;
+    height: 57px!important;
+    justify-content: center;
+    background-image: linear-gradient(to top, #434a63, #67749b 47%, #292f44 0%);
+}
+.match .details .left-box .teams p:first-child {
+    width: 349px;
+    justify-content: flex-end;
+    background-image: linear-gradient(to right, #a62626 3%, #464e68 81%);
+}
+.match .details .left-box .teams p:last-child {
+    justify-content: flex-start;
+    width: 350px;
+    background-image: linear-gradient(to right, #464e68 3%, #0e5ecc 81%);
+}
+.match .details .teams p {   
     text-align: left;
     line-height: 14px;
-    max-height: 42px;
     overflow: hidden;
     justify-content: flex-start;
 }
@@ -1071,17 +1197,16 @@ button,
     display: flex;
 }
 .app-detail .left {
-    width: 748px;
-    height: 595px;
+    /*width: 490px;*/
 }
 .app-detail .right {
     width: 432px;
-    margin-top: 100px;
 }
 
 .app-detail h4 {
-    font-size: 36px;
-    color: #67718f;
+    font-size: 40px;
+    font-weight: bold;
+    color: #414755;
 }
 .app-detail h4 span {
     display: block;
@@ -1093,18 +1218,18 @@ button,
     line-height: 1.6;
     margin-top: 20px;
     font-size: 14px;
-    color: #67718f;
+    color: #8b94ac;
 }
 .ercode-box {
     margin: 30px 0 0;
     text-align: center; 
     justify-content: space-between;
 }
-.ercode-box li {
-    width: 202px;
-    height: 250px;
+.ercode-box li p {
+    width: 190px;
+    height: 190px;
     padding-top: 25px;
-    background-image: url(../images/itembox-background-lighter@2x.png.webp);
+    background-image: url(../images/bg-ercode.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     color: #67718f;
@@ -1112,63 +1237,71 @@ button,
 .ercode-box li h5 {
     margin-top: 10px;
     font-size: 18px;
+    color: #32394f;
 }
 .ercode-box li h6 {
     margin-top: 4px;
     font-size: 12px;
+    color: #6a7391;
 }
-.domain-list a {
-    max-width: 100%;
-    height: 25px;
-    line-height: 25px;
-    display: inline-block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    color: #676b77;
-    font-size: 14px;
-    text-decoration: underline;
+.ercode-box li h6 a {
+    color: #85bfff;
 }
-/*.app-download .left,
-.hot-games .left {
-    -webkit-animation: tabSlideInRight .4s ease-in forwards;
-    animation: tabSlideInRight .4s ease-in forwards;
-}
-.app-download .right,
-.hot-games .right {
-    -webkit-animation: tabSlideInLeft .4s ease-in forwards;
-    animation: tabSlideInLeft .4s ease-in forwards;
-}*/
+
+ 
 .hot-games .left {
     width: 600px;
     height: 496px;
+    margin-left: 40px;
 }
 .hot-games .left img {
     width: 100%;
     height: 100%;
 }
 .hot-games .box .right {
-    width: 572px;
-    margin-top: 70px;
+    width: 450px;
+    margin: 150px 0 0 50px;
 }
 .hot-games .right h3 {
     font-size: 60px;
     font-weight: 500;
     color: #67718f;
+    border-style: solid;
+    border-width: 1px;
+    border-image-source: linear-gradient(to bottom, rgba(197, 160, 123, 0.24), rgba(255, 234, 213, 0.21) 98%);
+    border-image-slice: 1;
+    background-image: linear-gradient(to bottom, #f2ddc7, #cbab89);
     font-family: MicrosoftYaHei;
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    border: none;
+    text-align: left;
 }
-.hot-games .right h4 {    
-    margin-top: 25px;
-    font-size: 70px;
-    color: #d5b797;
-    font-family: DINPro;
-    white-space: nowrap;
+.hot-games .right h4 {   
+    text-align: left; 
+    margin-top: 5px;
+    opacity: 0.3;
+    font-family: MicrosoftYaHei;
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #6a7391;
 }
 .hot-games .right p {
     line-height: 1.6;
     margin-top: 20px;
     font-size: 14px;
-    color: #67718f;
+    color: #8b94ac;
     font-family: MicrosoftYaHei;
 }
 .hot-games .right  li {
@@ -1180,12 +1313,15 @@ button,
     font-size: 16px;
     text-align: center;
     margin-top: 0;
+    color: #6a7391;
 }
 .list {
     display: flex;
     height: 100%;
     position: absolute;
-    overflow: hidden;
+}
+.app-download .app-detail .list {
+    overflow: visible!important;
 }
 .app-download .app-detail {
     height: 590px;
@@ -1193,19 +1329,67 @@ button,
     margin-top: 10px;
 }
 .app-download .app-detail img {
-    width: 748px;
-    height: 595px;
+    width: 723px;
 }
-.hot-games .box {
-    height: 480px;
-    z-index: 1;    
-}
-
 .hot-games .box {
     position: relative;
     display: flex;
-    height: 480px;
+    height: 482px;
     z-index: 1;    
+}
+.hot-games ._1addy6uf1nYJgRM1OlApnv .rebeat {
+    opacity: 0!important;
+}
+.hot-games .rebeat {
+    opacity: 1;
+    position: absolute;
+    right: 38px;
+    top: 20px;
+    width: 146px;
+    height: 170px;
+    padding-top: 38px;
+    background-image: url(../images/image-lable-lighter-large.png);
+    background-repeat: no-repeat;
+}
+.hot-games .rebeat h3 {  
+    opacity: 0.5;
+    font-family: PingFangSC;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4d5774;
+}
+.hot-games .rebeat h4 img {
+    width: 90px;
+    text-align: center;
+    display: block;
+    margin: 6px auto;
+}
+.hot-games .rebeat h4 span {
+    font-size: 50px;
+    font-weight: bold;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4d5774;
+}
+.hot-games .rebeat h5 {  
+    opacity: 0.5;
+    font-family: HiraginoSansCNS-W6;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4d5774;    
 }
 .app-detail .left,
 .app-detail .right,
@@ -1283,8 +1467,8 @@ button,
 }
 .hot-games .right li i {
     justify-content: center;
-    width: 95px;
-    height: 107px;
+    width: 72px;
+    height: 78px;
     background: url(../images/spec-normal-new@2x.png.webp) no-repeat;
     background-size: contain;
 }
@@ -1339,6 +1523,21 @@ button,
     height: 134px;
     border: 2px solid #e8c198;    
 }
+.app-download .ercode-box {
+    justify-content: flex-start;    
+}
+.app-download .ercode-box li {
+    margin-right: 40px;  
+}
+.app-download .ercode-box p,
+.app-download .ercodeAll,
+.app-download .ercodeSports {
+    margin-top: 0;
+    border: none;    
+}
+
+
+
 
 /*电子*/
 .hot-games .right li .pg:after{background-position:-1352px 0}
@@ -1401,57 +1600,54 @@ button,
 .hot-games .right li:hover .kgcp:after{background-position:-988px 0}
 .hot-games .right li:hover .bbcp:after{background-position:-260px 0}
 .hot-games .right li:hover .tcgcp:after{background-position:-1924px 0}
-
+ 
 /*按钮*/
-.btn-group .ico-ft {background-position: -456px 0}
-.btn-group .ico-app-all {background-position: -152px 0}
-.btn-group .ico-app-ty {background-position: -456px 0}
-.btn-group .ico-ty {background-position: -456px 0}
-.btn-group .ico-ag {background-position: -152px 0}
-.btn-group .ico-qp {background-position: -76px 0}
-.btn-group .ico-dj {background-position: -228px 0}
-.btn-group .ico-cp {background-position: -304px 0}
-.btn-group .ico-dz {background-position: -380px 0}
-.btn-group .active .ico-ft {background-position: -486px 0}
-.btn-group .active .ico-bk {background-position: -30px 0}
-.btn-group .active .ico-app-all {background-position: -182px 0}
-.btn-group .active .ico-app-ty {background-position: -486px 0}
-.btn-group .active .ico-ty {background-position: -486px 0}
-.btn-group .active .ico-ag {background-position: -182px 0}
-.btn-group .active .ico-qp {background-position: -106px 0}
-.btn-group .active .ico-dj {background-position: -258px 0}
-.btn-group .active .ico-cp {background-position: -334px 0}
-.btn-group .active .ico-dz {background-position: -410px 0}
+.btn-group .ico-ft {background: url(../images/icon-soccer-darkblue-38.png) no-repeat;}
+.btn-group .ico-bk {background: url(../images/icon-basketball-darkblue-38.png) no-repeat;}
+.btn-group .ico-dj {background: url(../images/icon-esports-darkblue-38.png) no-repeat;}
+.btn-group .ico-app-ty {background: url(../images/icon-soccer-darkblue-38.png) no-repeat;}
+.btn-group .ico-app-all {background: url(../images/icon-dice-darkblue-38.png) no-repeat;}
+/*.hot-games .ico-ty {background: url(../images/icon-sportsevents-selected.png) no-repeat;}
+.hot-games .ico-ag {background: url(../images/icon-livecasino-selected.png) no-repeat;}
+.hot-games .ico-qp {background: url(../images/icon-chessandpoker-selected.png) no-repeat;}
+.hot-games .ico-dj {background: url(../images/icon-esports-selected.png) no-repeat!important;background-position: center!important;}
+.hot-games .ico-cp {background: url(../images/icon-lottery-selected.png) no-repeat;}
+.hot-games .ico-dz {background: url(../images/icon-slotgame-selected.png) no-repeat;}*/
+
+
+.btn-group .active .ico-ft {background: url(../images/icon-soccer-white-38.png) no-repeat center;}
+.btn-group .active .ico-bk {background: url(../images/icon-basketball-white-38.png) no-repeat center;}
+.btn-group .active .ico-dj {background: url(../images/icon-esports-white-38.png) no-repeat center;}
+.btn-group .active .ico-app-ty {background: url(../images/icon-soccer-white-38.png) no-repeat center;}
+.btn-group .active .ico-app-all {background: url(../images/icon-dice-white-38.png) no-repeat center;}
+
 
  
 .best-service {
-    margin-bottom: 50px!important;
+    margin: 80px auto 50px!important;
 }
 .best-service .box {
-    padding: 30px 35px;
+    padding: 0 35px 30px 35px;
+    margin-top: 0;
 }
 .best-service ul {
     justify-content: space-between;
 }
 .best-service .top li {
-    width: 235px;
-    height: 270px;
-    background: url(../images/itembox-background-stroke@2x.png.webp) no-repeat;
-    background-size: contain;
     text-align: center;
     position: relative;
 }
 .best-service .top h5 {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
-    color: #424a66; 
+    color: #32394f;
 }
 .best-service .top h6 {
     line-height: 1.4;
     margin: 10px auto;
     font-size: 12px;
-    color: #67718f;
+    color: #7b849f;
 }
 .best-service .ico-plant{
     margin: 35px auto 0;
@@ -1485,16 +1681,16 @@ button,
 
 .best-service .bottom li h6 {
     font-weight: 700;
-    font-size: 18px;
-    color: #414755;
+    font-size: 16px;
+    color: #32394f;
     font-family: MicrosoftYaHeiUI;
 }
 
 .best-service .bottom li p {
     line-height: 1.6;
     margin-top: 10px;
-    font-size: 14px;
-    color: #67718f;
+    font-size: 12px;
+    color: #7e87a1;
 }
 .best-service li .circle {
     color: #fff;
@@ -1755,13 +1951,27 @@ body {
     background-color: #434a63;
 }
 .foot-bottom {
+    padding-top: 20px;
 }
 .foot-left {
     width: 812px;
 }
 .foot-partner {
+    width: 380px;
+    flex-flow: column;
+    margin-left: 30px;
+}
+.foot-partner ul {
+    margin-bottom: 28px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.foot-partner ul:last-child {
+    margin-bottom: 0;
 }
 .foot-partner li {
+    width: 20%;
 }
 .foot-top .main {
     align-items: flex-start;

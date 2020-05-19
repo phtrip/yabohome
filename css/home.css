@@ -1439,15 +1439,15 @@ button,
 .hot-games .right li:hover .tcgcp:after{background-position:-1924px 0}
 
 /*按钮*/
-.btn-group .ico-ft {background-position: -456px 0}
-.btn-group .ico-app-all {background-position: -152px 0}
-.btn-group .ico-app-ty {background-position: -456px 0}
-.btn-group .ico-ty {background-position: -456px 0}
-.btn-group .ico-ag {background-position: -152px 0}
-.btn-group .ico-qp {background-position: -76px 0}
-.btn-group .ico-dj {background-position: -228px 0}
-.btn-group .ico-cp {background-position: -304px 0}
-.btn-group .ico-dz {background-position: -380px 0}
+.btn-group button .ico-ft {background-position: -456px 0!important}
+.btn-group button .ico-app-all {background-position: -152px 0}
+.btn-group button .ico-app-ty {background-position: -456px 0}
+.btn-group button .ico-ty {background-position: -456px 0}
+.btn-group button .ico-ag {background-position: -152px 0}
+.btn-group button .ico-qp {background-position: -76px 0}
+.btn-group button .ico-dj {background-position: -228px 0}
+.btn-group button .ico-cp {background-position: -304px 0}
+.btn-group button .ico-dz {background-position: -380px 0}
 .btn-group .active .ico-ft {background-position: -486px 0}
 .btn-group .active .ico-bk {background-position: -30px 0}
 .btn-group .active .ico-app-all {background-position: -182px 0}
