@@ -46,7 +46,7 @@ body {
 
 
 
-
+.playing-match,
 .foot-partner ul,
 .match .details .left-box .teams p,
 .foot-top .main,
@@ -174,7 +174,7 @@ button,
 .float-right {
     position: fixed;
     z-index: 100;
-    top: 50%;
+    top: 38%;
     right: 0;
     margin-top: -81px;
 }
@@ -190,23 +190,34 @@ button,
     background-repeat: no-repeat;
     background-size: contain;
 }
+.float-right li i {
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
  
-.float-right li:nth-child(1) {
+.float-right li:nth-child(1) i {
     background-image: url(../images/ico-help.png);
 }
-.float-right li:nth-child(2) {
+.float-right li:nth-child(2) i {
     background-image: url(../images/ico-kefu.png);
 }
-.float-right li:nth-child(3) {
+.float-right li:nth-child(3) i {
     background-image: url(../images/ico-app.png);
 }
-.float-right li:nth-child(1):hover {
+.float-right li:nth-child(1):hover i {
     background-image: url(../images/ico-help-active.png);
 }
-.float-right li:nth-child(2):hover {
+.float-right li:nth-child(2):hover i {
     background-image: url(../images/ico-kefu-active.png);
 }
-.float-right li:nth-child(3):hover {
+.float-right li:nth-child(3):hover i {
     background-image: url(../images/ico-app-active.png);
 }
 .backTop {
@@ -263,7 +274,7 @@ button,
     line-height: 46px;
 }
 .float-right li:hover > .box {
-    left: -130px;
+    left: -120px;
     font-size: 14px;
     visibility: visible;
     opacity: 1;
@@ -633,6 +644,66 @@ button,
     color: #67718f;
     cursor: pointer;
 }
+.playing-match {
+    padding: 15px 30px;
+    width: 440px;
+    text-align: center;
+    /*background: #d9dbe4;*/
+    border-radius: 70px;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 14px;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+}
+.playing-match:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d9dbe4;
+    z-index: 1;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);    
+}
+.playing-match p {
+    line-height: 24px;
+}
+.match-detail {
+    position: relative;
+    z-index: 2;    
+}
+.playing-match .teamA,
+.playing-match .teamB {
+    color: #000;
+    font-size: 16px;
+    position: relative;
+    z-index: 2;
+}
+.playing-match .teamA img,
+.playing-match .teamB img {
+    border: 6px solid #fff;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+.playing-match h6 {
+    color: #000;
+    font-size: 16px;
+}
+
+
+
+
 .page h2 {
     text-align: left;
     font-size: 40px;
@@ -1081,6 +1152,8 @@ button,
     width: 194px;
     height: 68px;    
     border: 1px solid #d9ddf2;
+    border-bottom: none;
+    border-top: none;
     margin: 0;
     background: url(../images/btn-game-mid.png);
     background-repeat: no-repeat;
@@ -1119,6 +1192,7 @@ button,
     justify-content: center;
     padding: 0;
     align-items: flex-end;
+    position: relative;
 }
 .match .details .left-box .teams p {
     color: #fff;
@@ -1128,7 +1202,6 @@ button,
 .match .details .left-box .teams img {
     width: 35px;
     height: 35px;
-    margin: 0 20px;
 }
 .match .details .left-box .teams .score {
     font-family: DIN;
@@ -1140,13 +1213,17 @@ button,
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    background-image: url(../images/bg-score.png);
+    background-size: cover;
     width: 141px;
     height: 57px!important;
-    justify-content: center;
-    background-image: linear-gradient(to top, #434a63, #67749b 47%, #292f44 0%);
 }
 .match .details .left-box .teams p:first-child {
     width: 349px;
+    margin-right: 100px;
     justify-content: flex-end;
     background-image: linear-gradient(to right, #a62626 3%, #464e68 81%);
 }
@@ -1154,6 +1231,12 @@ button,
     justify-content: flex-start;
     width: 350px;
     background-image: linear-gradient(to right, #464e68 3%, #0e5ecc 81%);
+}
+.match .details .left-box .teams p:first-child img {
+    margin: 0 40px 0 20px;
+}
+.match .details .left-box .teams p:last-child img {
+    margin: 0 20px 0 40px;
 }
 .match .details .teams p {   
     text-align: left;
@@ -1200,6 +1283,7 @@ button,
     /*width: 490px;*/
 }
 .app-detail .right {
+    margin-left: 55px;
     width: 432px;
 }
 
@@ -1287,7 +1371,7 @@ button,
 .hot-games .right h4 {   
     text-align: left; 
     margin-top: 5px;
-    opacity: 0.3;
+    opacity: 0.3!important;
     font-family: MicrosoftYaHei;
     font-size: 40px;
     font-weight: bold;
@@ -1607,12 +1691,12 @@ button,
 .btn-group .ico-dj {background: url(../images/icon-esports-darkblue-38.png) no-repeat;}
 .btn-group .ico-app-ty {background: url(../images/icon-soccer-darkblue-38.png) no-repeat;}
 .btn-group .ico-app-all {background: url(../images/icon-dice-darkblue-38.png) no-repeat;}
-/*.hot-games .ico-ty {background: url(../images/icon-sportsevents-selected.png) no-repeat;}
+.hot-games .ico-ty {background: url(../images/icon-sportsevents-selected.png) no-repeat;width: 48px!important;height: 48px!important;}
 .hot-games .ico-ag {background: url(../images/icon-livecasino-selected.png) no-repeat;}
 .hot-games .ico-qp {background: url(../images/icon-chessandpoker-selected.png) no-repeat;}
 .hot-games .ico-dj {background: url(../images/icon-esports-selected.png) no-repeat!important;background-position: center!important;}
 .hot-games .ico-cp {background: url(../images/icon-lottery-selected.png) no-repeat;}
-.hot-games .ico-dz {background: url(../images/icon-slotgame-selected.png) no-repeat;}*/
+.hot-games .ico-dz {background: url(../images/icon-slotgame-selected.png) no-repeat;}
 
 
 .btn-group .active .ico-ft {background: url(../images/icon-soccer-white-38.png) no-repeat center;}
@@ -1638,7 +1722,6 @@ button,
     position: relative;
 }
 .best-service .top h5 {
-    margin-top: 20px;
     font-size: 16px;
     font-weight: 700;
     color: #32394f;
@@ -1651,11 +1734,40 @@ button,
 }
 .best-service .ico-plant{
     margin: 35px auto 0;
-    width: 130px;
-    height: 130px;
-    background: url(../images/image-table@2x.png.webp) no-repeat;
+    width: 147px;
+    height: 150px;
+    background: url(../images/bg-circle.png) no-repeat;
     background-size: contain;
+    position: relative;
 } 
+.ico-plant .progress {
+    background-size: contain;
+    position: absolute;
+    transition: all ease .2s;
+}
+.ico-plant .progress-01 {
+    top: 30px;
+    left: 65px;
+    width: 15px;
+    height: 48px;
+    background: url(../images/ico-pin.png) no-repeat;    
+}
+.ico-plant .progress-02,
+.ico-plant .progress-03,
+.ico-plant .progress-04 {
+    background: url(../images/ico-pin-28.png) no-repeat;
+    top: 33px;
+    left: 65px;
+    width: 30px;
+    height: 48px;
+}
+.ico-plant p {
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    top: 85px;
+    left: 55px;
+}
 .best-service .bottom {
     flex-wrap: wrap;    
 }
@@ -1954,7 +2066,7 @@ body {
     padding-top: 20px;
 }
 .foot-left {
-    width: 812px;
+    width: 860px;
 }
 .foot-partner {
     width: 380px;
@@ -1962,9 +2074,10 @@ body {
     margin-left: 30px;
 }
 .foot-partner ul {
-    margin-bottom: 28px;
+    margin-bottom: 25px;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 .foot-partner ul:last-child {
@@ -2011,29 +2124,33 @@ body {
 }
 
 .goverment li i {
-    background-image: url(../images/sprite-foot-partner.png.webp);
+/*    background-image: url(../images/sprite-foot-partner.png.webp);
     background-repeat: no-repeat;
-    background-size: 1558px 50px;
+    background-size: 1558px 50px;*/
 }
 .goverment li:nth-child(1) i {
-    width: 89px;
-    height: 25px;
-    background-position: -1270px 0px;   
+    width: 115px;
+    height: 42px;
+    background-image: url(../images/db-commission.png);
+    background-repeat: no-repeat;
 }
 .goverment li:nth-child(2) i {
-    width: 154px;
-    height: 30px;
-    background-position: -1361px 0px;
+    width: 166px;
+    height: 42px;
+    background-image: url(../images/db-mga.png);
+    background-repeat: no-repeat;
 }
 .goverment li:nth-child(3) i {
-    width: 169px;
-    height: 40px;
-    background-position: -1099px 0px;
+    width: 176px;
+    height: 42px;
+    background-image: url(../images/db-fsc.png);
+    background-repeat: no-repeat;
 }
 .goverment li:nth-child(4) i {
-    width: 41px;
-    height: 41px;
-    background-position: -1517px 0px;
+    width: 145px;
+    height: 42px;
+    background-image: url(../images/db-pagcor.png);
+    background-repeat: no-repeat;
 }
 .goverment li p {
     font-size: 14px;
@@ -2047,16 +2164,65 @@ body {
 }
 .footer .partner-list li {
     width: auto;
-    margin: 0 20px;
+    margin: 0 25px;
+    transition: all ease .2s;
 }
 .footer .partner-list li a {
     background: none;
     color: #728099;
-    height: 40px;
-    line-height: 1.43;
+}
+.footer .partner-list li:hover a {
+    color: #9dafce;
+}
+
+
+.footer .partner-list li .img {
+    background-position: center;
+}
+.footer .partner-list li:nth-child(1) .img {
+    background: url(../images/db-manlian.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(2) .img {
+    background: url(../images/db-yidali.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(3) .img {
+    background: url(../images/db-bairen.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(4) .img {
+    background: url(../images/db-laisite.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(5) .img {
+    background: url(../images/db-agenting.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(6) .img {
+    background: url(../images/db-monage.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(7) .img {
+    background: url(../images/db-bolin.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(1):hover .img {
+    background: url(../images/db-manlian-2.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(2):hover .img {
+    background: url(../images/db-yidali-2.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(3):hover .img {
+    background: url(../images/db-bairen-2.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(4):hover .img {
+    background: url(../images/db-laisite-2.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(5):hover .img {
+    background: url(../images/db-agenting-2.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(6):hover .img {
+    background: url(../images/db-monage-2.png) no-repeat center;
+}
+.footer .partner-list li:nth-child(7):hover .img {
+    background: url(../images/db-bolin-2.png) no-repeat center;
 }
 .footer .partner-list {
-    
+    margin-top: 0;
 }
  
 .nav-footer {

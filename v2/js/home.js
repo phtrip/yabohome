@@ -139,10 +139,14 @@ function changImg(num) {
     }
     if (num === 0) {
         $(".btn-arrow-left").addClass("closed");   
-        $(".btn-arrow-right").removeClass("closed");  
+        $(".btn-arrow-left .preview").hide();  
+        $(".btn-arrow-right").removeClass("closed"); 
+        $(".btn-arrow-right .preview").show();  
     } else if (num == $('.banList li').length -1 ) {
         $(".btn-arrow-right").addClass("closed"); 
-        $(".btn-arrow-left").removeClass("closed");  
+        $(".btn-arrow-right .preview").hide();  
+        $(".btn-arrow-left").removeClass("closed"); 
+        $(".btn-arrow-left .preview").show();   
     } else {
         $(".btn-arrows span").removeClass("closed");
     }
@@ -157,7 +161,7 @@ function reStart(num) {
     start();
 }
 // ========================END===============================
-
+/*
 // ==========circle process==================================
 
 var canvas = document.getElementById('canvas'),
@@ -222,7 +226,7 @@ if (!circlesCreated && elementInViewport(canvas)) {
 window.onscroll = onScroll;
 window.onmousewheel = function (e) {
     onScroll()
-}
+}*/
 // ========================END===============================
 
 $(function() {
@@ -276,9 +280,9 @@ $(function() {
         500);
         return false;
     });
-    $("body").getNiceScroll(0).scrollend(function(e) {
+    /*$("body").getNiceScroll(0).scrollend(function(e) {
         onScroll()
-    });
+    });*/
     // 顶部导航
     $(".nav li").each(function(i) {
         $(this).hover(function() {  
