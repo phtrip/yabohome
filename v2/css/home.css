@@ -115,7 +115,7 @@ button,
     font-size: 16px;
     cursor: pointer;
     color: #434a63;
-    background:  url('../images/button-normal-140.svg');
+    background:  url('../images/button-normal-140.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
@@ -132,18 +132,17 @@ button,
 }
 .details .odds a:before,
 .btn-group button.active {
-    background:  url('../images/button-active-140.svg') no-repeat;
+    background:  url('../images/button-active-140.png') no-repeat;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .btn-group button .ico {
-    width: 28px;
-    height: 28px;   
+    width: 40px;
+    height: 40px;   
     display: block;
-    /*background:  url('../images/sprite-btn.png.webp');*/
     background-repeat: no-repeat;
     background-position: center;
-    /*background-size: 530px 44px;*/
+    background-size: contain;
     margin-right: 14px;
 }
 .btn-group button .ico,
@@ -151,6 +150,11 @@ button,
     cursor: pointer;
     position: relative;
     z-index: 2; 
+}
+.hot-games .btn-group button .ico {
+    width: 50px!important;
+    height: 50px!important;
+    margin: 5px 10px 0 0!important;
 }
 .btn-group {
     justify-content: flex-end;
@@ -372,15 +376,15 @@ button,
 }
 .header .nav a:before {
     content: "";
-    width: 13px;
-    height: 13px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
-    background: url(../images/icon-dropdown-small.svg);
+    background: url(../images/icon-dropdown-small.png);
     background-size: 100%;
     background-repeat: no-repeat;
     position: absolute;
     right: -22px;
-    top: 36px;
+    top: 33px;
     transition: all .2s ease;
 }
  
@@ -457,8 +461,9 @@ button,
     vertical-align: -5px;
 }
 .content {
-    background: #f7f9fb url('../images/bg-home.jpg');
+    background: #f7f9fb url('../images/bg-home.webp');
     background-repeat: repeat;
+    background-size: contain;
 }
 .content .page {
     margin-top: 110px;
@@ -475,14 +480,14 @@ button,
 }
 
 .banner {
+    width: 100%;
     overflow: hidden;
-    height: 860px;
     z-index: 99;
     margin: 82px auto 0;
     position: relative
 }
 .banner #inner {
-    height: 860px;    
+    min-height: 860px;    
 }
  .banList{
     list-style: none;
@@ -492,19 +497,17 @@ button,
     width: 100%;
     float: left;
     position: absolute;
-    /*display: none;*/
     opacity: 0;
 }
 .banList li a {
     display: block;
-    height: 860px;
     width: 100%;
     overflow:hidden;
     position: relative;
     margin: 0 auto;
 }
 .banner img {
-    height: 860px;
+    width: 100%;
 }
 .btn-arrows {
     display: flex;
@@ -529,12 +532,12 @@ button,
     transition: all ease .2s;
 }
 .btn-arrow-left {
-    background: url(../images/button-scrollarrow-left-gold-50.svg) no-repeat;
+    background: url(../images/button-scrollarrow-left-gold-50@2x.png) no-repeat;
     background-size: contain;
     left: 0;
 }
 .btn-arrow-right {
-    background: url(../images/button-scrollarrow-right-gold-50.svg) no-repeat;
+    background: url(../images/button-scrollarrow-right-gold-50@2x.png) no-repeat;
     background-size: contain;
     right: 0;
 }
@@ -616,13 +619,14 @@ button,
     position: relative;
     width: 100%;
     background: url(../images/bg-notionbar.png);
+    background-size: contain;
 }
 .news .ico-news {
     width: 20px;
     height: 20px;
     padding-right: 10px;
     display: inline-block;
-    background: url(../images/ico-news.svg) no-repeat;
+    background: url(../images/ico-news.png) no-repeat;
     background-size: contain;
 }
 .news .btn-more {
@@ -721,6 +725,9 @@ button,
 .hot-games .title {
     padding-top: 0;
 }
+.title-english {
+    height: 82px;
+}
 .page .title p {
     font-family: MicrosoftYaHei;
     font-size: 14px;
@@ -756,6 +763,7 @@ button,
     width: 100px;
     height: 100px;
     background-color: #e2e8f5;
+    background-size: contain!important;
 }
 .hot-live .title .left {
     background: url(../images/icon-eventlive-100.png) no-repeat;
@@ -1088,7 +1096,7 @@ button,
     height: 24px;
     line-height: 24px;
     width: 280px;
-    background-image: url('../images/backgroundimage-title-dark-25.svg');
+    background-image: url('../images/backgroundimage-title-dark-25.png');
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -1154,12 +1162,14 @@ button,
 .hot-games .btn-group button {
     width: 194px;
     height: 68px;    
+    line-height: 58px;
     border: 1px solid #d9ddf2;
     border-bottom: none;
     border-top: none;
     margin: 0;
     background: url(../images/btn-game-mid.png);
     background-repeat: no-repeat;
+    background-size: contain;
 }
 .hot-games .btn-group button:first-child {
     background: url(../images/btn-game-left.png);
@@ -1169,19 +1179,23 @@ button,
 .hot-games .btn-group button:last-child {
     background: url(../images/btn-game-right.png);
     background-repeat: no-repeat;    
+    background-size: contain;
     border: none;
 }
 .hot-games .btn-group button:first-child.active {
     background: url(../images/btn-game-left-active.png);
     background-repeat: no-repeat;    
+    background-size: contain;
 }
 .hot-games .btn-group button:last-child.active {
     background: url(../images/btn-game-right-active.png);
     background-repeat: no-repeat;    
+    background-size: contain;
 }
 .hot-games .btn-group button.active {
     background: url(../images/btn-game-mid-active.png);
     background-repeat: no-repeat;
+    background-size: contain;
 }
 .match .details .teams {
     justify-content: space-between;
@@ -1270,6 +1284,7 @@ button,
 }
 .teams span {
     background: url('../images/ico-vs.png');
+    background-size: contain;
     width: 30px;
     height: 20px;
     font-size: 12px;
@@ -1437,6 +1452,7 @@ button,
     padding-top: 38px;
     background-image: url(../images/image-lable-lighter-large.png);
     background-repeat: no-repeat;
+    background-size: contain;
 }
 .hot-games .rebeat h3 {  
     opacity: 0.5;
@@ -1556,21 +1572,19 @@ button,
     justify-content: center;
     width: 72px;
     height: 78px;
-    background: url(../images/spec-normal-new@2x.png.webp) no-repeat;
+    background: url(../images/spec-normal-new.png) no-repeat;
     background-size: contain;
 }
 .hot-games .right li i:after {
     content: "";
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: block;
-    background: url(../images/sprite.png.webp) no-repeat;
-    background-repeat: no-repeat;
-    background-size: 2182px 50px;
-    margin-top: -10px;
+    background-repeat: no-repeat; 
+    background-position: -1px -5px;
 }
 .hot-games .right li:hover i {
-    background: url(../images/spec-selected-new@2x.png.webp) no-repeat;
+    background: url(../images/spec-normal-new-active.png) no-repeat;
     background-size: contain;    
     animation: zoonInYb .5s ease forwards;
 }
@@ -1622,71 +1636,77 @@ button,
     margin-top: 0;
     border: none;    
 }
-
-
+.app-download .ercode-box canvas {
+    background: url(../images/image-frame-qrcode@2x.png) no-repeat;
+    background-size: contain;
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+}
 
 
 /*电子*/
-.hot-games .right li .pg:after{background-position:-1352px 0}
-.hot-games .right li .by:after{background-position:-520px 0}
-.hot-games .right li .mg:after{background-position:-1144px 0}
-.hot-games .right li .pp:after{background-position:-1456px 0}
-.hot-games .right li .dt:after{background-position:-312px 0}
-.hot-games .right li:hover .pt:after{background-position:-1560px 0}
-.hot-games .right li:hover .pg:after{background-position:-1404px 0}
-.hot-games .right li:hover .by:after{background-position:-572px 0}
-.hot-games .right li:hover .mg:after{background-position:-1196px 0}
-.hot-games .right li:hover .pp:after{background-position:-1508px 0}
-.hot-games .right li:hover .dt:after{background-position:-364px 0}
-.hot-games .right li:hover .pt:after{background-position:-1612px 0}
+.hot-games .right li .pg:after{background-image:url(../images/icons/icon-pg-golden@2x.png);background-size: contain;}
+.hot-games .right li .by:after{background-image:url(../images/icons/icon-fishing-golden@2x.png);background-size: contain;}
+.hot-games .right li .mg:after{background-image:url(../images/icons/icon-mg-golden@2x.png);background-size: contain;}
+.hot-games .right li .pp:after{background-image:url(../images/icons/icon-pp-golden@2x.png);background-size: contain;}
+.hot-games .right li .dt:after{background-image:url(../images/icons/icon-dt-golden@2x.png);background-size: contain;}
+.hot-games .right li .pt:after{background-image:url(../images/icons/icon-ag-golden@2x.png);background-size: contain;}
+
+.hot-games .right li:hover .pg:after{background-image:url(../images/icons/icon-pg-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .by:after{background-image:url(../images/icons/icon-fishing-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .mg:after{background-image:url(../images/icons/icon-mg-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .pp:after{background-image:url(../images/icons/icon-pp-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .dt:after{background-image:url(../images/icons/icon-dt-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .pt:after{background-image:url(../images/icons/icon-ag-white@2x.png);background-size: contain;}
 
 /*真人*/
-.hot-games .right li .bg:after{background-position:-2080px 0}
-.hot-games .right li .ag:after{background-position:0 0}
-.hot-games .right li .ebet:after{background-position:-416px 0}
-.hot-games .right li .og:after{background-position:-1248px 0}
-.hot-games .right li .gd:after{background-position:-728px 0}
-.hot-games .right li .bbin:after{background-position:-208px 0}
-.hot-games .right li:hover .bg:after{background-position:-2132px 0}
-.hot-games .right li:hover .ag:after{background-position:-52px 0}
-.hot-games .right li:hover .ebet:after{background-position:-468px 0}
-.hot-games .right li:hover .og:after{background-position:-1300px 0}
-.hot-games .right li:hover .gd:after{background-position:-780px 0}
-.hot-games .right li:hover .bbin:after{background-position:-260px 0}
+.hot-games .right li .bg:after{background-image:url(../images/icons/icon-big-game-golden@2x.png);background-size: contain;}
+.hot-games .right li .ag:after{background-image:url(../images/icons/icon-ag-golden@2x.png);background-size: contain;}
+.hot-games .right li .ebet:after{background-image:url(../images/icons/icon-ebet-golden@2x.png);background-size: contain;}
+.hot-games .right li .og:after{background-image:url(../images/icons/icon-og-golden@2x.png);background-size: contain;}
+.hot-games .right li .gd:after{background-image:url(../images/icons/icon-gd-golden@2x.png);background-size: contain;}
+.hot-games .right li .bbin:after{background-image:url(../images/icons/icon-b-bin-golden@2x.png);background-size: contain;}
+.hot-games .right li:hover .bg:after{background-image:url(../images/icons/icon-big-game-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .ag:after{background-image:url(../images/icons/icon-ag-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .ebet:after{background-image:url(../images/icons/icon-ebet-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .og:after{background-image:url(../images/icons/icon-og-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .gd:after{background-image:url(../images/icons/icon-gd-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .bbin:after{background-image:url(../images/icons/icon-b-bin-white@2x.png);background-size: contain;}
 
 /*棋牌*/
-.hot-games .right li .ybqp:after{background-position:-1976px 0}
-.hot-games .right li .gdqp:after{background-position: -624px  0}
-.hot-games .right li .syqp:after{background-position:-1664px 0}
-.hot-games .right li:hover .ybqp:after{background-position:-2028px 0}
-.hot-games .right li:hover .gdqp:after{background-position:-676px 0}
-.hot-games .right li:hover .syqp:after{background-position:-1716px 0}
+.hot-games .right li .ybqp:after{background-image:url(../images/icons/icon-big-game-golden@2x.png);background-size: contain;}
+.hot-games .right li .gdqp:after{background-image:url(../images/icons/icon-gao-deng-golden@2x.png);background-size: contain;}
+.hot-games .right li .syqp:after{background-image:url(../images/icons/icon-s-gboardgame-golden@2x.png);background-size: contain;}
+.hot-games .right li:hover .ybqp:after{background-image:url(../images/icons/icon-big-game-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .gdqp:after{background-image:url(../images/icons/icon-gaodeng-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .syqp:after{background-image:url(../images/icons/icon-s-gboardgame-white@2x.png);background-size: contain;}
 
 /*体育*/
-.hot-games .right li .ybty:after{background-position:-1976px 0}
-.hot-games .right li .imty:after{background-position: -832px  0}
-.hot-games .right li:hover .ybty:after{background-position:-2028px 0}
-.hot-games .right li:hover .imty:after{background-position:-884px 0}
+.hot-games .right li .ybty:after{background-image:url(../images/icons/icon-yabo-golden@2x.png);background-size: contain;}
+.hot-games .right li:hover .ybty:after{background-image:url(../images/icons/icon-yabo-white@2x.png);background-size: contain;}
+.hot-games .right li .imty:after{background-image:url(../images/icons/icon-im-golden@2x.png);background-size: contain;}
+.hot-games .right li:hover .imty:after{background-image:url(../images/icons/icon-im-white@2x.png);background-size: contain;}
 
 /*电竞*/
-.hot-games .right li .imdj:after{background-position:-832px 0}
-.hot-games .right li .fydj:after{background-position: -104px  0}
-.hot-games .right li:hover .imdj:after{background-position:-884px 0}
-.hot-games .right li:hover .fydj:after{background-position:-156px 0}
+.hot-games .right li .imdj:after{background-image:url(../images/icons/icon-yabo-golden@2x.png);background-size: contain;}
+.hot-games .right li .fydj:after{background-image:url(../images/icons/icon-avia-golden@2x.png);background-size: contain;}
+.hot-games .right li:hover .imdj:after{background-image:url(../images/icons/icon-yabo-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .fydj:after{background-image:url(../images/icons/icon-tcg-golden@2x.png);background-size: contain;}
 
 /*彩票*/
-.hot-games .right li .ybcp:after{background-position:-1976px 0}
-.hot-games .right li .sycp:after{background-position: -1768px 0}
-.hot-games .right li .lbcp:after{background-position:-1040px 0}
-.hot-games .right li .kgcp:after{background-position:-936px 0}
-.hot-games .right li .bbcp:after{background-position:-208px 0}
-.hot-games .right li .tcgcp:after{background-position:-1872px 0}
-.hot-games .right li:hover .ybcp:after{background-position:-2028px 0}
-.hot-games .right li:hover .sycp:after{background-position:-1820px 0}
-.hot-games .right li:hover .lbcp:after{background-position:-1092px 0}
-.hot-games .right li:hover .kgcp:after{background-position:-988px 0}
-.hot-games .right li:hover .bbcp:after{background-position:-260px 0}
-.hot-games .right li:hover .tcgcp:after{background-position:-1924px 0}
+.hot-games .right li .ybcp:after{background-image:url(../images/icons/icon-yabo-golden@2x.png);background-size: contain;}
+.hot-games .right li .sycp:after{background-image:url(../images/icons/icon-sg-golden@2x.png);background-size: contain;}
+.hot-games .right li .lbcp:after{background-image:url(../images/icons/icon-lb-golden@2x.png);background-size: contain;}
+.hot-games .right li .kgcp:after{background-image:url(../images/icons/icon-kg-golden@2x.png);background-size: contain;}
+.hot-games .right li .bbcp:after{background-image:url(../images/icons/icon-b-bin-golden@2x.png);background-size: contain;}
+.hot-games .right li .tcgcp:after{background-image:url(../images/icons/icon-tcg-golden@2x.png);background-size: contain;}
+.hot-games .right li:hover .ybcp:after{background-image:url(../images/icons/icon-yabo-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .sycp:after{background-image:url(../images/icons/icon-sg-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .lbcp:after{background-image:url(../images/icons/icon-lb-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .kgcp:after{background-image:url(../images/icons/icon-kg-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .bbcp:after{background-image:url(../images/icons/icon-b-bin-white@2x.png);background-size: contain;}
+.hot-games .right li:hover .tcgcp:after{background-image:url(../images/icons/icon-tcg-white@2x.png);background-size: contain;}
  
 /*按钮*/
 .btn-group .ico-ft {background: url(../images/icon-soccer-darkblue-38.png) no-repeat;}
@@ -1697,16 +1717,17 @@ button,
 .hot-games .ico-ty {background: url(../images/icon-sportsevents-selected.png) no-repeat;width: 48px!important;height: 48px!important;}
 .hot-games .ico-ag {background: url(../images/icon-livecasino-selected.png) no-repeat;}
 .hot-games .ico-qp {background: url(../images/icon-chessandpoker-selected.png) no-repeat;}
-.hot-games .ico-dj {background: url(../images/icon-esports-selected.png) no-repeat!important;background-position: center!important;}
+.hot-games .ico-dj {background: url(../images/icon-esports-selected.png) no-repeat!important;background-position: center!important;
+    background-size: contain!important;}
 .hot-games .ico-cp {background: url(../images/icon-lottery-selected.png) no-repeat;}
 .hot-games .ico-dz {background: url(../images/icon-slotgame-selected.png) no-repeat;}
 
 
-.btn-group .active .ico-ft {background: url(../images/icon-soccer-white-38.png) no-repeat center;}
-.btn-group .active .ico-bk {background: url(../images/icon-basketball-white-38.png) no-repeat center;}
-.btn-group .active .ico-dj {background: url(../images/icon-esports-white-38.png) no-repeat center;}
-.btn-group .active .ico-app-ty {background: url(../images/icon-soccer-white-38.png) no-repeat center;}
-.btn-group .active .ico-app-all {background: url(../images/icon-dice-white-38.png) no-repeat center;}
+.btn-group .active .ico-ft {background: url(../images/icon-soccer-white-38.png) no-repeat center; background-size: contain;}
+.btn-group .active .ico-bk {background: url(../images/icon-basketball-white-38.png) no-repeat center; background-size: contain;}
+.btn-group .active .ico-dj {background: url(../images/icon-esports-white-38.png) no-repeat center; background-size: contain;}
+.btn-group .active .ico-app-ty {background: url(../images/icon-soccer-white-38.png) no-repeat center; background-size: contain;}
+.btn-group .active .ico-app-all {background: url(../images/icon-dice-white-38.png) no-repeat center; background-size: contain;}
 
 
  
@@ -1743,6 +1764,17 @@ button,
     background-size: contain;
     position: relative;
 } 
+
+.ico-plant canvas {
+    margin: 24px 0 0 0;      
+}
+.ico-plant label {
+    color: #fff;
+    position: absolute;
+    right: 47px;
+    bottom: 45px;
+    font-size: 12px;
+}
 .ico-plant .progress {
     background-size: contain;
     position: absolute;
@@ -1785,8 +1817,8 @@ button,
     height: 107px;
 }
 .best-service .bottom li img {
-    width: 107px;
-    height: 107px;
+    width: 100px;
+    height: 100px;
     display: block;
 }
 
@@ -2077,7 +2109,7 @@ body {
     margin-left: 30px;
 }
 .foot-partner ul {
-    margin-bottom: 25px;
+    margin-bottom: 14px;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
@@ -2088,6 +2120,12 @@ body {
 }
 .foot-partner li {
     width: 20%;
+}
+.foot-partner ul li:last-child {
+    width: 30px;
+}
+.foot-partner li img {
+    width: 100%;
 }
 .foot-top .main {
     align-items: flex-start;
@@ -2127,9 +2165,7 @@ body {
 }
 
 .goverment li i {
-/*    background-image: url(../images/sprite-foot-partner.png.webp);
-    background-repeat: no-repeat;
-    background-size: 1558px 50px;*/
+    background-size: contain;
 }
 .goverment li:nth-child(1) i {
     width: 115px;
@@ -2180,7 +2216,10 @@ body {
 
 
 .footer .partner-list li .img {
+    width: 44px;
+    height: 44px;
     background-position: center;
+    background-size: 100%!important;
 }
 .footer .partner-list li:nth-child(1) .img {
     background: url(../images/db-manlian.png) no-repeat center;

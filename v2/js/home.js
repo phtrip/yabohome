@@ -67,6 +67,218 @@
 })();*/
 // ========================END===============================
 
+// 仪表盘
+var gaugePS1 = new RadialGauge({
+    renderTo: 'gauge-01',
+    width: 90,
+    height: 90,
+    units: '',
+    minValue: 0,
+    maxValue: 220,
+    minorTicks: 2,
+    ticksAngle: 270,
+    startAngle: 70,
+    strokeTicks: false,
+    highlights  : [
+        { from : 0,  to : 50, color : 'transparent' },
+        { from : 50, to : 100, color : 'transparent' }
+    ],
+    valueInt: 0,
+    valueDec: 0,
+    colorPlate: "transparent",
+    colorMajorTicks: "transparent",
+    colorMinorTicks: "transparent",
+    colorNumbers: "transparent",
+    colorValueText: "#fff",
+    colorValueBoxRect: "transparent",
+    colorValueBoxRectEnd: "transparent",
+    colorValueBoxBackground: "transparent",
+    colorValueBoxShadow: true,
+    colorValueTextShadow: true,
+    colorNeedleShadowUp: true,
+    colorNeedleShadowDown: false,
+    colorNeedle: "#afb8c8",
+    colorNeedleEnd: "#e5ebf6",
+    colorNeedleCircleOuter: "#b3bccc",
+    colorNeedleCircleOuterEnd: "#edf3fd",
+    borderShadowWidth: 1,
+    borders: false,
+    needleWidth: 16,
+    needleCircleSize: 20,
+    needleCircleOuter: true,
+    needleCircleInner: true,
+    animationDuration: 4000,
+    animationRule: "bounce",
+    fontValueSize: 80,
+    animatedValue: true
+});
+var gaugePS2 = new RadialGauge({
+    renderTo: 'gauge-02',
+    width: 90,
+    height: 90,
+    units: '',
+    minValue: 0,
+    maxValue: 220,
+    minorTicks: 2,
+    ticksAngle: 270,
+    startAngle: 70,
+    strokeTicks: false,
+    highlights  : [
+        { from : 0,  to : 50, color : 'transparent' },
+        { from : 50, to : 100, color : 'transparent' }
+    ],
+    valueInt: 0,
+    valueDec: 0,
+    colorPlate: "transparent",
+    colorMajorTicks: "transparent",
+    colorMinorTicks: "transparent",
+    colorNumbers: "transparent",
+    colorValueText: "#fff",
+    colorValueBoxRect: "transparent",
+    colorValueBoxRectEnd: "transparent",
+    colorValueBoxBackground: "transparent",
+    colorValueBoxShadow: true,
+    colorValueTextShadow: true,
+    colorNeedleShadowUp: true,
+    colorNeedleShadowDown: false,
+    colorNeedle: "#afb8c8",
+    colorNeedleEnd: "#e5ebf6",
+    colorNeedleCircleOuter: "#b3bccc",
+    colorNeedleCircleOuterEnd: "#edf3fd",
+    borderShadowWidth: 1,
+    borders: false,
+    needleWidth: 16,
+    needleCircleSize: 20,
+    needleCircleOuter: true,
+    needleCircleInner: true,
+    animationDuration: 4000,
+    animationRule: "bounce",
+    fontValueSize: 80,
+    animatedValue: true
+});
+var gaugePS3 = new RadialGauge({
+    renderTo: 'gauge-03',
+    width: 90,
+    height: 90,
+    units: '',
+    minValue: 0,
+    maxValue: 220,
+    minorTicks: 2,
+    ticksAngle: 270,
+    startAngle: 70,
+    strokeTicks: false,
+    highlights  : [
+        { from : 0,  to : 50, color : 'transparent' },
+        { from : 50, to : 100, color : 'transparent' }
+    ],
+    valueInt: 0,
+    valueDec: 0,
+    colorPlate: "transparent",
+    colorMajorTicks: "transparent",
+    colorMinorTicks: "transparent",
+    colorNumbers: "transparent",
+    colorValueText: "#fff",
+    colorValueBoxRect: "transparent",
+    colorValueBoxRectEnd: "transparent",
+    colorValueBoxBackground: "transparent",
+    colorValueBoxShadow: true,
+    colorValueTextShadow: true,
+    colorNeedleShadowUp: true,
+    colorNeedleShadowDown: false,
+    colorNeedle: "#afb8c8",
+    colorNeedleEnd: "#e5ebf6",
+    colorNeedleCircleOuter: "#b3bccc",
+    colorNeedleCircleOuterEnd: "#edf3fd",
+    borderShadowWidth: 1,
+    borders: false,
+    needleWidth: 16,
+    needleCircleSize: 20,
+    needleCircleOuter: true,
+    needleCircleInner: true,
+    animationDuration: 4000,
+    animationRule: "bounce",
+    fontValueSize: 80,
+    animatedValue: true
+});
+var gaugePS4 = new RadialGauge({
+    renderTo: 'gauge-04',
+    width: 90,
+    height: 90,
+    units: '',
+    minValue: 0,
+    maxValue: 220,
+    minorTicks: 2,
+    ticksAngle: 270,
+    startAngle: 70,
+    strokeTicks: false,
+    highlights  : [
+        { from : 0,  to : 50, color : 'transparent' },
+        { from : 50, to : 100, color : 'transparent' }
+    ],
+    valueInt: 0,
+    valueDec: 0,
+    colorPlate: "transparent",
+    colorMajorTicks: "transparent",
+    colorMinorTicks: "transparent",
+    colorNumbers: "transparent",
+    colorValueText: "#fff",
+    colorValueBoxRect: "transparent",
+    colorValueBoxRectEnd: "transparent",
+    colorValueBoxBackground: "transparent",
+    colorValueBoxShadow: true,
+    colorValueTextShadow: true,
+    colorNeedleShadowUp: true,
+    colorNeedleShadowDown: false,
+    colorNeedle: "#afb8c8",
+    colorNeedleEnd: "#e5ebf6",
+    colorNeedleCircleOuter: "#b3bccc",
+    colorNeedleCircleOuterEnd: "#edf3fd",
+    borderShadowWidth: 1,
+    borders: false,
+    needleWidth: 16,
+    needleCircleSize: 20,
+    needleCircleOuter: true,
+    needleCircleInner: true,
+    animationDuration: 4000,
+    animationRule: "bounce",
+    fontValueSize: 80,
+    animatedValue: true
+});
+
+function createCircles () {
+    gaugePS1.draw();
+    gaugePS1.value = "60";
+
+    gaugePS2.draw();
+    gaugePS2.value = "80";
+
+    gaugePS3.draw();
+    gaugePS3.value = "90";
+
+    gaugePS4.draw();
+    gaugePS4.value = "22";
+}
+var canvas = document.getElementById('canvas');
+function onScroll() {
+    if (elementInViewport(canvas)) {
+        createCircles();
+    }
+}
+function elementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+
+    return (
+      rect.top  >= 0 &&
+      rect.left >= 0 &&
+      rect.top  <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+}
+window.onscroll = onScroll;
+window.onmousewheel = function (e) {
+    onScroll()
+}
+// ========================END===============================
+
 // =============banner 轮播================================
 $(function() {
     $(".btnnum, .btn-arrows span").hover(function(){
@@ -233,7 +445,7 @@ $(function() {
     $(window).scroll(function(){
         if($(window).scrollTop() <= 10){
              $('[animation]').removeAttr("style");
-            initEasyMotion()            
+            initEasyMotion();
         }
         if($(window).scrollTop() > 500){
             $(".backTop, .float-right").css("opacity", "1")

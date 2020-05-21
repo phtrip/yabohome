@@ -17,7 +17,7 @@
     <div class="scroll-content">
         <header class="header">
             <div class="main">
-                <h1 class="logo"><img src="./images/logo.svg" alt="logo"></h1>
+                <h1 class="logo"><img src="./images/logo.png" alt="logo"></h1>
                 <ul class="nav">
                     <li class="active"><a href="">首页</a></li>
                     <li><a href="">体育</a></li>
@@ -574,7 +574,7 @@
                             </p>
                         </h2>                   
                     </div>
-                    <img src="./images/popular-events@2x.png">
+                    <img src="./images/popular-events@2x.png" class="title-english">
                 </div>
                 <div class="box" animation="bottom-to-top" animation-time="830">
                     <div class="btn-group">
@@ -651,7 +651,7 @@
                             </p>
                         </h2>                   
                     </div>
-                    <img src="./images/app-download@2x.png">
+                    <img src="./images/app-download@2x.png" class="title-english">
                 </div>
                 <div class="box">
                     <div class="btn-group tab-tilte">
@@ -666,12 +666,12 @@
                                 </h4>
                                 <p animation="bottom-to-top" animation-time="900">业内赔率最高！覆盖世界各地赛事，让球、大小、半全场、波胆、单双、总入球、连串过关等多元竞猜。更有动画直播，让您体验轻松聊球，娱乐投注两不误。</p>
                                 <ul class="ercode-box">
-                                    <li animation="bottom-to-top" animation-time="900">>
+                                    <li animation="bottom-to-top" animation-time="900">
                                         <p class="ercodeSports"></p>
                                         <h5>扫码下载</h5>
                                         <h6>支持IOS&Android</h6>
                                     </li>
-                                    <li animation="bottom-to-top" animation-time="1000">>
+                                    <li animation="bottom-to-top" animation-time="1000">
                                         <p><img src="./images/image-html-5-large.png" style="width:93px;height: 105px;margin-top: 20px;"></p>
                                         <h5>直接访问</h5>
                                         <h6><a href="http://www.yabo.com" target="_blank">http://www.yabo.com</a></h6>
@@ -679,12 +679,12 @@
                                 </ul>
                             </div>
                             <div animation="bottom-to-top" animation-time="900">
-                                <img src="./images/image-appdown-sports@2x.png" class="right" >
+                                <img src="./images/image-appdown-sports@2x.webp" class="right" >
                             </div>
                         </div> 
                         <div class="list _1addy6uf1nYJgRM1OlApnv">
                             <div class="left">
-                                <img src="./images/image-appdownload@2x.png" animation="bottom-to-top" animation-time="900">
+                                <img src="./images/image-appdownload@2x.webp" animation="bottom-to-top" animation-time="900">
                             </div>
                             <div class="right">
                                 <h4 animation="bottom-to-top" animation-time="800">
@@ -723,7 +723,7 @@
                             </p>
                         </h2>                   
                     </div>
-                    <img src="./images/top-games@2x.png">
+                    <img src="./images/top-games@2x.png" class="title-english">
                 </div>
                 <div class="box bg-common">
                     <div class="list"><!-- 体育赛事t -->
@@ -884,50 +884,46 @@
                             </p>
                         </h2>                   
                     </div>
-                    <img src="./images/quality-services@2x.png">
+                    <img src="./images/quality-services@2x.png" class="title-english">
                 </div>
                 <div class="box bg-common">
                     <div id="canvas">
                         <ul class="top">
                             <li animation="bottom-to-top" animation-time="870">
-                                <div class="circle" id="circles-1"></div>
                                 <div class="bottom">
                                     <div class="ico-plant">
-                                        <div class="progress progress-01" animation="rotate-a" animation-time="1900"></div>
-                                        <p>60秒</p>
+                                        <canvas id="gauge-01"></canvas>
+                                        <label>秒</label>
                                     </div>
                                     <h5>平均存款时间</h5>
                                     <h6>AVERAGE<br>DEPOSIT TIME</h6>
                                 </div>
                             </li>
                             <li animation="bottom-to-top" animation-time="800">
-                                <div class="circle" id="circles-2"></div>
                                 <div class="bottom">
                                     <div class="ico-plant">
-                                        <div class="progress progress-02" animation="rotate-a" animation-time="1800"></div>
-                                        <p>80家</p>
+                                        <canvas id="gauge-02"></canvas>
+                                        <label>家</label>
                                     </div>
                                     <h5>合作支付平台</h5>
                                     <h6>PAYMENT PLATFORM<br>COOPERATIVES</h6>
                                 </div>
                             </li>
                             <li animation="bottom-to-top" animation-time="810">
-                                <div class="circle" id="circles-3"></div>
                                 <div class="bottom">
                                     <div class="ico-plant">
-                                        <div class="progress  progress-03" animation="rotate-a" animation-time="1700"></div>
-                                        <p>90秒</p>
+                                        <canvas id="gauge-03"></canvas>
+                                        <label>秒</label>
                                     </div>
                                     <h5>平均取款时间</h5>
                                     <h6>AVERAGE<br>WITHDRAWAL TIME</h6>
                                 </div>
                             </li>
                             <li animation="bottom-to-top" animation-time="870">
-                                <div class="circle" id="circles-4"></div>
                                 <div class="bottom">
                                     <div class="ico-plant">
-                                        <div class="progress progress-04" animation="rotate-a" animation-time="1800"></div>
-                                        <p>22家</p>
+                                        <canvas id="gauge-04"></canvas>
+                                        <label>家</label>
                                     </div>
                                     <h5>合作游戏平台</h5>
                                     <h6>GAME PLATFORM<br>COOPERATIVES</h6>
@@ -961,7 +957,8 @@
                             <div class="img"><img src="./images/icon-boardgame-16.png"></div>
                             <div class="text">
                                 <h6>三端任您选择</h6>
-                                <p>引领市场的卓越技术，自主研发了全套终端应用，让您畅享Web、H5，更有iOS、Android原生APP，让您随时随地，娱乐投注随心所欲！7x24小时在线客服提供最贴心、最优质的服务。</p>
+                                <p>引领市场的卓越技术，自主研发了全套终端应用，让您畅享Web、H5，更有
+iOS、Android原生APP，让您随时随地，娱乐投注随心所欲！</p>
                             </div>
                         </li>
                     </ul>
