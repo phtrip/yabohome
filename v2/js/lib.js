@@ -58,7 +58,7 @@ function initEasyMotion () {
         "fade": null,
         "left-to-right": "translateX(-100px)",
         "right-to-left": "translateX(100px)",
-        "bottom-to-top": "translateY(200px)",
+        "bottom-to-top": "translateY(300px)",
         "top-to-bottom": "translateY(-300px)",
         "rotate": "rotate(-720deg)",
         "rotate-a": "rotate(-128deg)",

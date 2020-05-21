@@ -235,10 +235,11 @@ $(function() {
              $('[animation]').removeAttr("style");
             initEasyMotion()            
         }
-        if($(window).scrollTop() > 300){
-            $(".backTop").show()
+        if($(window).scrollTop() > 500){
+            $(".backTop, .float-right").css("opacity", "1")
+            $(".float-right").css("position", "fixed").css("top", "50%");
         } else {
-            $(".backTop").hide()
+            $(".backTop, .float-right").css("opacity", "0")
         }
     });
     // init();
@@ -252,8 +253,10 @@ $(function() {
     });
     $("body").niceScroll({
         cursorcolor: "#d7b18a",
-        cursorwidth: "8px",
+        cursorwidth: "1px",
         touchbehavior: true,
+        cursoropacitymin: 0,
+        cursoropacitymax:0
     });
      // APP下载 tab切换
     $('.app-download .btn-group button').on("click", function() {

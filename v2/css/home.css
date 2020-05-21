@@ -172,9 +172,9 @@ button,
 
 
 .float-right {
-    position: fixed;
-    z-index: 100;
-    top: 38%;
+    position: absolute;
+    z-index: 9;
+    top: 150px;
     right: 0;
     margin-top: -81px;
 }
@@ -189,6 +189,8 @@ button,
     position: relative;
     background-repeat: no-repeat;
     background-size: contain;
+    transform: translateX(0);
+    transition: all 0.9s ease 0s;
 }
 .float-right li i {
     width: 54px;
@@ -231,7 +233,8 @@ button,
     right: 0;
     z-index: 999;
     cursor: pointer;
-    display: none;
+    transform: translateX(0);
+    transition: all 2s ease 0s;
 }
 .backTop:hover {
     background-image: url(../images/ico-toTop-active.png);
