@@ -934,7 +934,7 @@ button,
     background: url(../images/bg-box_bottom.png) no-repeat;
     background-size: 100%;
     border-radius: 0 0 20px 20px;
-    background-position: 0 -15px;
+    background-position: 0 -28px;
 }
 .match .teams {
     justify-content: flex-start;
@@ -1751,7 +1751,8 @@ button,
 
  
 .best-service {
-    margin: 80px auto 50px!important;
+    margin: 0 auto!important;
+    padding: 80px 0 50px 0;
 }
 .best-service .box {
     padding: 0 35px 30px 35px;
