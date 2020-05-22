@@ -49,8 +49,8 @@ function initEasyMotion () {
     }
     var map = {
         "fade": null,
-        "left-to-right": "translateX(-100px)",
-        "right-to-left": "translateX(100px)",
+        "left-to-right": "translateX(-30px)",
+        "right-to-left": "translateX(30px)",
         "bottom-to-top": "translateY(300px)",
         "top-to-bottom": "translateY(-300px)",
         "rotate": "rotate(-720deg)",

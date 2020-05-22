@@ -135,6 +135,177 @@
     transform: translateZ(0)
   }
 }
+
+@-webkit-keyframes qone {
+  0% {
+    transform: translate3d(-120px,0,0)
+  }
+
+  to {
+    transform: translateZ(0)
+  }
+}
+
+@keyframes qone {
+  0% {
+    transform: translate3d(-120px,0,0)
+  }
+
+  to {
+    transform: translateZ(0)
+  }
+}
+
+@-webkit-keyframes leftToRight {
+  0% {
+    transform: translate3d(-30px,0,0)
+  }
+
+  to {
+    transform: translateZ(0)
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    transform: translate3d(-30px,0,0)
+  }
+
+  to {
+    transform: translateZ(0)
+  }
+}
+
+@-webkit-keyframes rightToLeft {
+  0% {
+    transform: translate3d(30px,0,0)
+  }
+
+  to {
+    transform: translateZ(0)
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: translate3d(30px,0,0)
+  }
+
+  to {
+    transform: translateZ(0)
+  }
+}
+
+
+@-webkit-keyframes qfour {
+  0% {
+    transform: translate3d(60px,0,0)
+  }
+
+  to {
+    transform: translateZ(0)
+  }
+}
+
+@keyframes qfour {
+  0% {
+    transform: translate3d(60px,0,0)
+  }
+
+  to {
+    transform: translateZ(0)
+  }
+}
+
+@-webkit-keyframes opacity0-5 {
+  0% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: .5;
+  }
+}
+
+@keyframes opacity0-5 {
+  0% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: .5;
+  }
+}
+
+@-webkit-keyframes oneTwo {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50px,0,0)
+    
+  }
+
+  to {
+    opacity: .5;
+    transform: translateZ(0)
+  }
+}
+@keyframes oneTwo {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50px,0,0)
+  }
+
+  to {
+    opacity: .5;
+    transform: translateZ(0)
+  }
+}
+
+@-webkit-keyframes twoTwo {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50px,0,0)    
+  }
+
+  to {
+    opacity: .5;
+    transform: translateZ(0)
+  }
+}
+@keyframes twoTwo {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50px,0,0)
+  }
+
+  to {
+    opacity: .5;
+    transform: translateZ(0)
+  }
+}
+
+@-webkit-keyframes threeTwo {
+  0% {
+    opacity: 0;
+    transform: translate3d(50px,0,0)    
+  }
+
+  to {
+    opacity: .5;
+    transform: translateZ(0)
+  }
+}
+@keyframes threeTwo {
+  0% {
+    opacity: 0;
+    transform: translate3d(50px,0,0)
+  }
+
+  to {
+    opacity: .5;
+    transform: translateZ(0)
+  }
+}
 /*@-webkit-keyframes tabFadeOut {
   0% {
     opacity: 1;

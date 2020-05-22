@@ -191,10 +191,20 @@ function createCircles () {
     gaugePS4.value = "22";
 }
 var canvas = document.getElementById('canvas');
+var imgGroup = document.getElementById('img-group');
 function onScroll() {
     if (elementInViewport(canvas)) {
         createCircles();
     }
+    if (elementInViewport(imgGroup)) {
+        $("#img-group").addClass("img-group-open")
+    } else {
+        $("#img-group").removeClass("img-group-open")
+    }
+    /*var a = $(".imgGroup").offset().top;
+    if (a >= $(window).scrollTop() && a < ($(window).scrollTop() + $(window).height())) {
+        alert("div在可视范围");
+    }*/
 }
 function elementInViewport(el) {
     var rect = el.getBoundingClientRect();

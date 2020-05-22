@@ -900,7 +900,7 @@ button,
 .hot-games .bg-common,
 .hot-live .bg-common  {
     background: url(../images/bg-box_mid.png) no-repeat;
-    background-position: 0 -24px;
+    background-position: 0 -46px;
     background-size: 100% 100%;
     position: relative;
 }
@@ -934,7 +934,7 @@ button,
     background: url(../images/bg-box_bottom.png) no-repeat;
     background-size: 100%;
     border-radius: 0 0 20px 20px;
-    background-position: 0 -28px;
+    background-position: 0 -44px;
 }
 .match .teams {
     justify-content: flex-start;
@@ -1176,7 +1176,7 @@ button,
     z-index: 6;
 }
 .hot-games .list {
-    top: -90px;
+    top: -72px;
 }
 .hot-games .btn-group button {
     width: 195px;
@@ -1382,7 +1382,7 @@ button,
 }
 .hot-games .box .right {
     width: 450px;
-    margin: 150px 0 0 50px;
+    margin: 135px 0 0 50px;
 }
 .hot-games .right h3 {
     font-size: 60px;
@@ -1450,13 +1450,16 @@ button,
     z-index: 1;    
     margin-top: 10px;
 }
-.app-download .app-detail img {
-    width: 723px;
+.app-download .app-detail .left {
+    width: 500px;
+}
+.app-download .app-detail .right {
+    width: 645px;
 }
 .hot-games .box {
     position: relative;
     display: flex;
-    height: 482px;
+    height: 500px;
     z-index: 1;    
 }
 .hot-games ._1addy6uf1nYJgRM1OlApnv .rebeat {
@@ -1531,6 +1534,161 @@ button,
     -webkit-animation: caxiHhY0Fn4NIQVjQVlJu .4s ease-in forwards;
     animation: caxiHhY0Fn4NIQVjQVlJu .4s ease-in forwards;
 }
+.img-group {
+    width: 100%;
+    height: 100%;
+}
+.img-group-open .q1 {
+    -webkit-animation: qone .9s ease-in forwards;
+    animation: qone .9s ease-in forwards;
+}
+.img-group-open .q2 {
+    -webkit-animation: leftToRight 1s ease-in forwards;
+    animation: leftToRight 1s ease-in forwards;
+}
+.img-group-open .q3 {
+    -webkit-animation: rightToLeft 1s ease-in forwards;
+    animation: rightToLeft 1s ease-in forwards;
+}
+.img-group-open .q4 {
+    -webkit-animation: qfour .9s ease-in forwards;
+    animation: qfour .9s ease-in forwards;
+}
+.img-group-open .q1-2 {
+    -webkit-animation: oneTwo .9s ease-in forwards;
+    animation: oneTwo .9s ease-in forwards;
+}
+.img-group-open .q2-2 {
+    -webkit-animation: twoTwo 1s ease-in forwards;
+    animation: twoTwo 1s ease-in forwards;
+}
+.img-group-open .q3-2 {
+    -webkit-animation: threeTwo 1s ease-in forwards;
+    animation: threeTwo 1s ease-in forwards;
+}
+
+
+.img-group img {
+    position: absolute;
+    /*opacity: 1!important;*/
+}
+.img-group .q1 {
+    width: 263px;
+    height: 394px;
+    object-fit: contain;
+    z-index: 8;
+    left: 48px;
+    top: -20px;
+}
+.img-group .q1-2 {
+    width: 217px;
+    height: 375px;
+    object-fit: contain;
+    opacity: 0.5;
+    z-index: 7;
+    left: 128px;
+    top: -13px;
+}
+.img-group .q2 {
+    width: 321px;
+    height: 433px;
+    object-fit: contain;
+    right: 196px;
+    top: -40px;
+    z-index: 6;
+}
+.img-group .q2-2 {
+    width: 214px;
+    height: 395px;
+    object-fit: contain;
+    opacity: 0.5;
+    z-index: 5;
+    right: 149px;
+    top: -21px;
+}
+.img-group .q3 {
+    width: 324px;
+    height: 438px;
+    object-fit: contain;
+    right: 46px;
+    top: -30px;
+    z-index: 4;
+}
+.img-group .q3-2 {
+    width: 181px;
+    height: 333px;
+    object-fit: contain;
+    opacity: 0.5;
+    z-index: 3;
+    right: 13px;
+    top: 48px;
+}
+.img-group .q4 {
+    width: 241px;
+    height: 358px;
+    object-fit: contain;
+    right: -48px;
+    top: 52px;
+    z-index: 2;
+}
+.img-group .b1 {
+    width: 723px;
+    height: 234px;
+    object-fit: contain;
+    bottom: 0;
+    top: auto;
+}
+.img-group .b1 {
+    width: 723px;
+    height: 234px;
+    object-fit: contain;
+    z-index: 1;
+}
+.img-group .b2 {
+    width: 294px;
+    height: 253px;
+    object-fit: contain;
+    bottom: 20px;
+    top: auto;
+    right: -73px;
+    z-index: 3!important;
+}
+.yinzi01 {
+    width: 515px;
+    height: 104px;
+    object-fit: contain;
+    opacity: 0.6;
+    top: auto;
+    left: 0;
+    bottom: 159px;
+    z-index: 2!important;
+}
+.yinzi02 {
+    width: 515px;
+    height: 104px;
+    object-fit: contain;
+    opacity: 0.6;
+    top: auto;
+    left: 215px;
+    bottom: 147px;
+    z-index: 2!important;
+}
+.yinzi03 {
+    width: 515px;
+    height: 104px;
+    object-fit: contain;
+    opacity: 0.6;
+    top: auto;
+    left: 0;
+    bottom: 159px;
+    z-index: 2!important;
+}
+
+
+
+
+
+
 
 
 ._1addy6uf1nYJgRM1OlApnv .left,
