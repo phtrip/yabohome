@@ -112,7 +112,7 @@ button,
     line-height: 50px;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     color: #434a63;
     background:  url('../images/button-normal-140.png');
@@ -160,7 +160,7 @@ button,
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    margin-right: 14px;
+    margin-right: 5px;
 }
 .btn-group button .ico,
 .btn-group button label {
@@ -171,7 +171,7 @@ button,
 .hot-games .btn-group button .ico {
     width: 50px!important;
     height: 50px!important;
-    margin: 5px 10px 0 0!important;
+    margin: 5px 0 0 0!important;
 }
 .btn-group {
     justify-content: flex-end;
@@ -1032,6 +1032,7 @@ button,
     height: 50px;
     color: #fff;
     text-decoration: none;
+      font-family: MicrosoftYaHei;
     box-shadow: 0 4px 12px 0 #ffe4c8;
 }
 .details .odds a:after,

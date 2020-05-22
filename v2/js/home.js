@@ -1,72 +1,4 @@
-
-// =============banner hover================================
-/*(function() {
-  var container = document.getElementById("container"),
-      inner = document.getElementById("inner");
-  var mouse = {
-    _x: 0,
-    _y: 0,
-    x: 0,
-    y: 0,
-    updatePosition: function(event) {
-      var e = event || window.event;
-      this.x = e.clientX - this._x;
-      this.y = (e.clientY - this._y) * -1;
-    },
-    setOrigin: function(e) {
-      this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-      this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
-    },
-    show: function() {
-      return "(" + this.x + ", " + this.y + ")";
-    }
-  };
-
-  mouse.setOrigin(container);
-
-  var counter = 0;
-  var refreshRate = 10;
-  var isTimeToUpdate = function() {
-    return counter++ % refreshRate === 0;
-  };
-
-  var onMouseEnterHandler = function(event) {
-    update(event);
-  };
-
-  var onMouseLeaveHandler = function() {
-    inner.style = "";
-  };
-
-  var onMouseMoveHandler = function(event) {
-    if (isTimeToUpdate()) {
-      update(event);
-    }
-  };
-
-  var update = function(event) {
-    mouse.updatePosition(event);
-    updateTransformStyle(
-      (mouse.y / inner.offsetHeight / 2).toFixed(2),
-      (mouse.x / inner.offsetWidth / 2).toFixed(2)
-    );
-  };
-
-  var updateTransformStyle = function(x, y) {
-    var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
-    inner.style.transform = style;
-    inner.style.webkitTransform = style;
-    inner.style.mozTranform = style;
-    inner.style.msTransform = style;
-    inner.style.oTransform = style;
-  };
-
-  container.onmousemove = onMouseMoveHandler;
-  container.onmouseleave = onMouseLeaveHandler;
-  container.onmouseenter = onMouseEnterHandler;
-})();*/
-// ========================END===============================
-
+ 
 // 仪表盘
 var gaugePS1 = new RadialGauge({
     renderTo: 'gauge-01',
@@ -373,73 +305,6 @@ function reStart(num) {
     start();
 }
 // ========================END===============================
-/*
-// ==========circle process==================================
-
-var canvas = document.getElementById('canvas'),
-circlesCreated = false;
-function onScroll() {
-    if (!circlesCreated && elementInViewport(canvas)) {
-        circlesCreated = true;
-        createCircles();
-    } else if (elementInViewport(canvas)) {
-        circlesCreated = true;
-    } else {
-        circlesCreated = false;
-    }
-}
-function elementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-
-    return (
-      rect.top  >= 0 &&
-      rect.left >= 0 &&
-      rect.top  <= (window.innerHeight || document.documentElement.clientHeight)
-    );
-}
-function createCircles() {
-    var colors = [
-            ['#524e6a', '#eaba9e'], ['#524e6a', '#eaba9e'], ['#524e6a', '#eaba9e'], ['#524e6a', '#eaba9e']
-        ],
-        circles = [];
-    for (var i = 1; i <= colors.length; i++) {
-        var child = document.getElementById('circles-' + i);
-            if (i === 1 || i === 1) {
-                percentage = 60
-            } else if (i === 3) {
-                percentage = 90             
-            } else if (i === 4) {
-                percentage = 22
-            }
-
-            circle = Circles.create({
-                id:         child.id,
-                value:      percentage,
-                radius:     40,
-                width:      6,
-                colors:     colors[i - 1],
-                duration:   1500,
-                textClass: 'circles-text',
-                text: function(value) {
-                    if (value === 22) {
-                        return value + '<span>家</span>';
-                    } else {
-                        return value + '<span>秒</span>';
-                    }
-                }
-        });
-        circles.push(circle);
-    }
-}
-if (!circlesCreated && elementInViewport(canvas)) {
-    circlesCreated = true;
-    createCircles();
-}
-window.onscroll = onScroll;
-window.onmousewheel = function (e) {
-    onScroll()
-}*/
-// ========================END===============================
 
 $(function() {
     $(window).scroll(function(){
@@ -475,6 +340,10 @@ $(function() {
         var cur=$(this).index();
         $(this).addClass('active').siblings().removeClass('active');
         $(this).parent().next('.bg-common').find('.list').eq(cur).removeClass('_1addy6uf1nYJgRM1OlApnv').siblings().addClass('_1addy6uf1nYJgRM1OlApnv');
+    });
+     // APP下载 tab切换 hover
+    $('.btn-group button').hover(function(){
+        $(this).addClass('active').siblings().removeClass('active');
     });
      // 鸭脖游戏 tab切换
     $('.hot-games .btn-group button').on("click", function() {
