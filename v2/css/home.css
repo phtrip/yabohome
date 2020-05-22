@@ -122,6 +122,7 @@ button,
     justify-content: center;
     margin-right: 12px;
     cursor: pointer;
+    position: relative;
 }
 .btn-group button:last-child {
     margin-right: 0;
@@ -135,6 +136,22 @@ button,
     background:  url('../images/button-active-140.png') no-repeat;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+.app-download .btn-group button:before,
+.hot-live .btn-group button:before {
+    content: '';
+    display: block;
+    box-shadow: 0 4px 12px 0 #dbe7ff;
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.app-download .btn-group button.active:before,
+.hot-live .btn-group button.active:before {
+    box-shadow: 0 4px 12px 0 #ffe4c8;
 }
 .btn-group button .ico {
     width: 40px;
@@ -1015,6 +1032,7 @@ button,
     height: 50px;
     color: #fff;
     text-decoration: none;
+    box-shadow: 0 4px 12px 0 #ffe4c8;
 }
 .details .odds a:after,
 .details .odds a:before {
@@ -1160,10 +1178,10 @@ button,
     top: -90px;
 }
 .hot-games .btn-group button {
-    width: 194px;
+    width: 195px;
     height: 68px;    
     line-height: 58px;
-    border: 1px solid #d9ddf2;
+    /*border: 1px solid #d9ddf2;*/
     border-bottom: none;
     border-top: none;
     margin: 0;
@@ -1173,14 +1191,15 @@ button,
 }
 .hot-games .btn-group button:first-child {
     background: url(../images/btn-game-left.png);
-    background-repeat: no-repeat;    
-    border: none;
+    background-repeat: no-repeat;   
+    background-size: contain; 
+    /*border: none;*/
 }
 .hot-games .btn-group button:last-child {
     background: url(../images/btn-game-right.png);
     background-repeat: no-repeat;    
     background-size: contain;
-    border: none;
+    /*border: none;*/
 }
 .hot-games .btn-group button:first-child.active {
     background: url(../images/btn-game-left-active.png);
