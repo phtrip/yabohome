@@ -1553,14 +1553,17 @@ button,
     width: 100%;
     height: 100%;
 }
+.yinzi01,
 .img-group-open .q1 {
     -webkit-animation: qone 1.8s ease-in forwards;
     animation: qone 1.8s ease-in forwards;
 }
+.yinzi02,
 .img-group-open .q2 {
     -webkit-animation: leftToRight 1.8s ease-in forwards;
     animation: leftToRight 1.8s ease-in forwards;
 }
+.yinzi03,
 .img-group-open .q3 {
     -webkit-animation: rightToLeft 1.8s ease-in forwards;
     animation: rightToLeft 1.8s ease-in forwards;
@@ -1568,6 +1571,10 @@ button,
 .img-group-open .q4 {
     -webkit-animation: qfour 1.8s ease-in forwards;
     animation: qfour 1.8s ease-in forwards;
+}
+.img-group-open .t4 {
+    -webkit-animation: tfour 1.8s ease-in forwards;
+    animation: tfour 1.8s ease-in forwards;
 }
 .img-group-open .q1-2 {
     -webkit-animation: oneTwo 1.8s ease-in forwards;
@@ -1618,8 +1625,8 @@ button,
     object-fit: contain;
     opacity: 0.5;
     z-index: 5;
-    right: 149px;
-    top: -21px;
+    right: 174px;
+    top: -30px;
 }
 .img-group .q3 {
     width: 324px;
@@ -1635,8 +1642,8 @@ button,
     object-fit: contain;
     opacity: 0.5;
     z-index: 3;
-    right: 13px;
-    top: 48px;
+    right: 14px;
+    top: 50px;
 }
 .img-group .q4 {
     width: 241px;
@@ -1674,8 +1681,8 @@ button,
     object-fit: contain;
     opacity: 0.6;
     top: auto;
-    left: 0;
-    bottom: 159px;
+    left: -22px;
+    bottom: 160px;
     z-index: 2!important;
 }
 .yinzi02 {
@@ -1684,8 +1691,8 @@ button,
     object-fit: contain;
     opacity: 0.6;
     top: auto;
-    left: 215px;
-    bottom: 147px;
+    left: 68px;
+    bottom: 148px;
     z-index: 2!important;
 }
 .yinzi03 {
@@ -1694,8 +1701,8 @@ button,
     object-fit: contain;
     opacity: 0.6;
     top: auto;
-    left: 0;
-    bottom: 159px;
+    left: 204px;
+    bottom: 137px;
     z-index: 2!important;
 }
 .img-group .t4 {
@@ -1710,8 +1717,8 @@ button,
     height: 274px;
 }
 .img-group .t2-2 {
-    right: 158px;
-    top: -23px;
+    right: 174px;
+    top: -33px;
 }
 .img-group .t1-2 {
     left: 126px;
