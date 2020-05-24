@@ -1553,17 +1553,17 @@ button,
     width: 100%;
     height: 100%;
 }
-.yinzi01,
+.img-group-open .yinzi01,
 .img-group-open .q1 {
     -webkit-animation: qone 1.8s ease-in forwards;
     animation: qone 1.8s ease-in forwards;
 }
-.yinzi02,
+.img-group-open .yinzi02,
 .img-group-open .q2 {
     -webkit-animation: leftToRight 1.8s ease-in forwards;
     animation: leftToRight 1.8s ease-in forwards;
 }
-.yinzi03,
+.img-group-open .yinzi03,
 .img-group-open .q3 {
     -webkit-animation: rightToLeft 1.8s ease-in forwards;
     animation: rightToLeft 1.8s ease-in forwards;
