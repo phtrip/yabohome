@@ -123,19 +123,23 @@ button,
     margin-right: 12px;
     cursor: pointer;
     position: relative;
+    transition: all ease .2s;
 }
 .btn-group button:last-child {
     margin-right: 0;
 }
 
-.btn-group button.active {
+.btn-group button.active,
+.btn-group button.selected {
     color: #fff;
 }
 .details .odds a:before,
-.btn-group button.active {
+.btn-group button.active,
+.btn-group button.selected {
     background:  url('../images/button-active-140.png') no-repeat;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    transition: all ease .2s;
 }
 .app-download .btn-group button:before,
 .hot-live .btn-group button:before {
@@ -148,10 +152,14 @@ button,
     position: absolute;
     top: 0;
     left: 0;
+    transition: all ease .2s;
 }
 .app-download .btn-group button.active:before,
-.hot-live .btn-group button.active:before {
+.hot-live .btn-group button.active:before,
+.app-download .btn-group button.selected:before,
+.hot-live .btn-group button.selected:before {
     box-shadow: 0 4px 12px 0 #ffe4c8;
+    transition: all ease .2s;
 }
 .btn-group button .ico {
     width: 40px;
@@ -178,7 +186,8 @@ button,
 }
 
 /*按钮*/
-.btn-group .active .ico {
+.btn-group .active .ico,
+.btn-group .selected .ico {
     animation: zoonInBtn .35s ease-out;
 }
 
@@ -244,20 +253,22 @@ button,
     background-image: url(../images/ico-app-active.png);
 }
 .backTop {
-    width: 54px;
-    height: 54px;
-    background-image: url(../images/ico-toTop.png);
-    background-repeat: no-repeat;
-    background-size: contain;
     position: fixed;
     bottom: 10%;
     right: 0;
     z-index: 999;
     cursor: pointer;
-    transform: translateX(0);
-    transition: all 2s ease 0s;
 }
-.backTop:hover {
+.backTop i {
+    width: 54px;
+    height: 54px;
+    background-image: url(../images/ico-toTop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    transition: all ease .2s;
+}
+.backTop:hover i {
     background-image: url(../images/ico-toTop-active.png);
     background-size: contain;
 }
@@ -1176,7 +1187,7 @@ button,
     z-index: 6;
 }
 .hot-games .list {
-    top: -72px;
+    top: -65px;
 }
 .hot-games .btn-group button {
     width: 195px;
@@ -1202,17 +1213,20 @@ button,
     background-size: contain;
     /*border: none;*/
 }
-.hot-games .btn-group button:first-child.active {
+.hot-games .btn-group button:first-child.active,
+.hot-games .btn-group button:first-child.selected {
     background: url(../images/btn-game-left-active.png);
     background-repeat: no-repeat;    
     background-size: contain;
 }
-.hot-games .btn-group button:last-child.active {
+.hot-games .btn-group button:last-child.active,
+.hot-games .btn-group button:last-child.selected {
     background: url(../images/btn-game-right-active.png);
     background-repeat: no-repeat;    
     background-size: contain;
 }
-.hot-games .btn-group button.active {
+.hot-games .btn-group button.active,
+.hot-games .btn-group button.selected {
     background: url(../images/btn-game-mid-active.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -1459,8 +1473,9 @@ button,
 .hot-games .box {
     position: relative;
     display: flex;
-    height: 500px;
-    z-index: 1;    
+    height: 508px;
+    z-index: 1;   
+    margin-top: 60px; 
 }
 .hot-games ._1addy6uf1nYJgRM1OlApnv .rebeat {
     opacity: 0!important;
@@ -1469,7 +1484,7 @@ button,
     opacity: 1;
     position: absolute;
     right: 38px;
-    top: 20px;
+    top: 5px;
     width: 146px;
     height: 170px;
     padding-top: 38px;
@@ -1539,32 +1554,32 @@ button,
     height: 100%;
 }
 .img-group-open .q1 {
-    -webkit-animation: qone .9s ease-in forwards;
-    animation: qone .9s ease-in forwards;
+    -webkit-animation: qone 1.8s ease-in forwards;
+    animation: qone 1.8s ease-in forwards;
 }
 .img-group-open .q2 {
-    -webkit-animation: leftToRight 1s ease-in forwards;
-    animation: leftToRight 1s ease-in forwards;
+    -webkit-animation: leftToRight 1.8s ease-in forwards;
+    animation: leftToRight 1.8s ease-in forwards;
 }
 .img-group-open .q3 {
-    -webkit-animation: rightToLeft 1s ease-in forwards;
-    animation: rightToLeft 1s ease-in forwards;
+    -webkit-animation: rightToLeft 1.8s ease-in forwards;
+    animation: rightToLeft 1.8s ease-in forwards;
 }
 .img-group-open .q4 {
-    -webkit-animation: qfour .9s ease-in forwards;
-    animation: qfour .9s ease-in forwards;
+    -webkit-animation: qfour 1.8s ease-in forwards;
+    animation: qfour 1.8s ease-in forwards;
 }
 .img-group-open .q1-2 {
-    -webkit-animation: oneTwo .9s ease-in forwards;
-    animation: oneTwo .9s ease-in forwards;
+    -webkit-animation: oneTwo 1.8s ease-in forwards;
+    animation: oneTwo 1.8s ease-in forwards;
 }
 .img-group-open .q2-2 {
-    -webkit-animation: twoTwo 1s ease-in forwards;
-    animation: twoTwo 1s ease-in forwards;
+    -webkit-animation: twoTwo 1.8s ease-in forwards;
+    animation: twoTwo 1.8s ease-in forwards;
 }
 .img-group-open .q3-2 {
-    -webkit-animation: threeTwo 1s ease-in forwards;
-    animation: threeTwo 1s ease-in forwards;
+    -webkit-animation: threeTwo 1.8s ease-in forwards;
+    animation: threeTwo 1.8s ease-in forwards;
 }
 
 
@@ -1683,11 +1698,25 @@ button,
     bottom: 159px;
     z-index: 2!important;
 }
-
-
-
-
-
+.img-group .t4 {
+    right: -50px;
+    width: 255px;
+    height: 307px;
+}
+.img-group .t3-2 {
+    right: 35px;
+    top: 52px;
+    width: 169px;
+    height: 274px;
+}
+.img-group .t2-2 {
+    right: 158px;
+    top: -23px;
+}
+.img-group .t1-2 {
+    left: 126px;
+    top: -8px;
+}
 
 
 
@@ -1901,11 +1930,21 @@ button,
 .hot-games .ico-dz {background: url(../images/icon-slotgame-selected.png) no-repeat;}
 
 
-.btn-group .active .ico-ft {background: url(../images/icon-soccer-white-38.png) no-repeat center; background-size: contain;}
-.btn-group .active .ico-bk {background: url(../images/icon-basketball-white-38.png) no-repeat center; background-size: contain;}
-.btn-group .active .ico-dj {background: url(../images/icon-esports-white-38.png) no-repeat center; background-size: contain;}
-.btn-group .active .ico-app-ty {background: url(../images/icon-soccer-white-38.png) no-repeat center; background-size: contain;}
-.btn-group .active .ico-app-all {background: url(../images/icon-dice-white-38.png) no-repeat center; background-size: contain;}
+.btn-group .active .ico-ft,
+.btn-group .selected .ico-ft 
+{background: url(../images/icon-soccer-white-38.png) no-repeat center; background-size: contain;}
+.btn-group .active .ico-bk,
+.btn-group .selected .ico-bk
+ {background: url(../images/icon-basketball-white-38.png) no-repeat center; background-size: contain;}
+.btn-group .active .ico-dj,
+.btn-group .selected .ico-dj
+ {background: url(../images/icon-esports-white-38.png) no-repeat center; background-size: contain;}
+.btn-group .active .ico-app-ty ,
+.btn-group .selected .ico-app-ty 
+{background: url(../images/icon-soccer-white-38.png) no-repeat center; background-size: contain;}
+.btn-group .active .ico-app-all ,
+.btn-group .selected .ico-app-all 
+{background: url(../images/icon-dice-white-38.png) no-repeat center; background-size: contain;}
 
 
  

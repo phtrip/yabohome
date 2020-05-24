@@ -40,7 +40,8 @@ var gaugePS1 = new RadialGauge({
     needleCircleOuter: true,
     needleCircleInner: true,
     animationDuration: 4000,
-    animationRule: "bounce",
+    animationRule: "elastic", // elastic bounce
+    // animationSpeed: 100,
     fontValueSize: 80,
     animatedValue: true
 });
@@ -84,7 +85,7 @@ var gaugePS2 = new RadialGauge({
     needleCircleOuter: true,
     needleCircleInner: true,
     animationDuration: 4000,
-    animationRule: "bounce",
+    animationRule: "elastic",
     fontValueSize: 80,
     animatedValue: true
 });
@@ -128,7 +129,7 @@ var gaugePS3 = new RadialGauge({
     needleCircleOuter: true,
     needleCircleInner: true,
     animationDuration: 4000,
-    animationRule: "bounce",
+    animationRule: "elastic",
     fontValueSize: 80,
     animatedValue: true
 });
@@ -172,7 +173,7 @@ var gaugePS4 = new RadialGauge({
     needleCircleOuter: true,
     needleCircleInner: true,
     animationDuration: 4000,
-    animationRule: "bounce",
+    animationRule: "elastic",
     fontValueSize: 80,
     animatedValue: true
 });
@@ -348,22 +349,33 @@ $(function() {
      // APP下载 tab切换
     $('.app-download .btn-group button').on("click", function() {
         var cur=$(this).index();
-        $(this).addClass('active').siblings().removeClass('active');
+        $(this).addClass('active selected').siblings().removeClass('active selected');
         $(this).parent().next('.bg-common').find('.list').eq(cur).removeClass('_1addy6uf1nYJgRM1OlApnv').siblings().addClass('_1addy6uf1nYJgRM1OlApnv');
+        $(".img-group").removeClass("img-group-open");
+        $(this).parent().next('.bg-common').find('.list').eq(cur).find("#img-group").addClass("img-group-open");
+        // $("._1addy6uf1nYJgRM1OlApnv").removeClass("img-group-open");
+        // $("#img-group").addClass("img-group-open");
     });
      // APP下载 tab切换 hover
     $('.btn-group button').hover(function(){
         $(this).addClass('active').siblings().removeClass('active');
+    }, function() {
+        $(this).removeClass('active');
     });
      // 鸭脖游戏 tab切换
     $('.hot-games .btn-group button').on("click", function() {
         var cur=$(this).index();
-        $(this).addClass('active').siblings().removeClass('active');
+        $(this).addClass('active selected').siblings().removeClass('active selected');
         $(this).parent().prev('.bg-common').find('.list').eq(cur).removeClass('_1addy6uf1nYJgRM1OlApnv').siblings().addClass('_1addy6uf1nYJgRM1OlApnv');
+        if ($(this).find('label').text() === '彩票游戏') {
+            $(".hot-games .rebeat").hide();
+        } else {
+            $(".hot-games .rebeat").show();
+        }
     });
      // 直播数据切换
     $('.hot-live .btn-group button').on("click", function() {
-        $(this).addClass('active').siblings().removeClass('active');
+        $(this).addClass('active selected').siblings().removeClass('active selected');
         weblist($(this).attr("data-type"));
     });
      // 返回顶部
