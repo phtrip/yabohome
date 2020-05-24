@@ -363,7 +363,7 @@
   }
   50% {
     opacity: 0;
-    transform: translate3d(20px,0,0)
+    transform: translate3d(30px,0,0)
   }
 
   100% {
@@ -378,7 +378,7 @@
   }
   50% {
     opacity: 0;
-    transform: translate3d(20px,0,0)    
+    transform: translate3d(30px,0,0)
   }
 
   100% {
