@@ -1681,7 +1681,7 @@ button,
     object-fit: contain;
     opacity: 0.6;
     top: auto;
-    left: -22px;
+    left: 33px;
     bottom: 160px;
     z-index: 2!important;
 }
@@ -1691,7 +1691,7 @@ button,
     object-fit: contain;
     opacity: 0.6;
     top: auto;
-    left: 68px;
+    left: 116px;
     bottom: 148px;
     z-index: 2!important;
 }
@@ -1701,8 +1701,8 @@ button,
     object-fit: contain;
     opacity: 0.6;
     top: auto;
-    left: 204px;
-    bottom: 137px;
+    left: 226px;
+    bottom: 142px;
     z-index: 2!important;
 }
 .img-group .t4 {
