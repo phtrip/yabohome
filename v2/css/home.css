@@ -1608,15 +1608,15 @@ button,
     object-fit: contain;
     opacity: 0.5;
     z-index: 7;
-    left: 128px;
-    top: -13px;
+    left: 133px;
+    top: -19px;
 }
 .img-group .q2 {
     width: 321px;
     height: 433px;
     object-fit: contain;
-    right: 196px;
-    top: -40px;
+    left: 133px;
+    top: -49px;
     z-index: 6;
 }
 .img-group .q2-2 {
@@ -1625,15 +1625,15 @@ button,
     object-fit: contain;
     opacity: 0.5;
     z-index: 5;
-    right: 174px;
-    top: -30px;
+    left: 278px;
+    top: -13px;
 }
 .img-group .q3 {
     width: 324px;
     height: 438px;
     object-fit: contain;
-    right: 46px;
-    top: -30px;
+    left: 278px;
+    top: -25px;
     z-index: 4;
 }
 .img-group .q3-2 {
@@ -1642,15 +1642,15 @@ button,
     object-fit: contain;
     opacity: 0.5;
     z-index: 3;
-    right: 14px;
-    top: 50px;
+    left: 453px;
+    top: 57px;
 }
 .img-group .q4 {
     width: 241px;
     height: 358px;
     object-fit: contain;
-    right: -48px;
-    top: 52px;
+    left: 453px;
+    top: 57px;
     z-index: 2;
 }
 .img-group .b1 {
@@ -1708,18 +1708,16 @@ button,
     height: 307px;
 }
 .img-group .t3-2 {
-    right: 35px;
-    top: 52px;
     width: 169px;
     height: 274px;
 }
 .img-group .t2-2 {
-    right: 174px;
-    top: -33px;
+    left: 277px;
+    top: -17px;
 }
 .img-group .t1-2 {
-    left: 126px;
-    top: -8px;
+    left: 133px;
+    top: -17px;
 }
 
 
