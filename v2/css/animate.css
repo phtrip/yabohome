@@ -337,7 +337,7 @@
 
   100% {
     opacity: .5;
-    transform: translateZ(0)
+    transform: translate3d(15px,10px,0)  
   }
 }
 @keyframes twoTwo {
@@ -352,7 +352,7 @@
 
   100% {
     opacity: .5;
-    transform: translateZ(0)
+    transform: translate3d(15px,10px,0)  
   }
 }
 
