@@ -482,8 +482,12 @@ function getFootbasketPlayingData () {
                         '<p><img src="'+res.data.team2_logo+'">'+ res.data.team2 +'</p>';
             } else {
                 $(".match .teams").addClass('no-playing');
-                liveStr += '<p class="cQ_ch">意大利甲级联赛</p>'+
-                            '<p class="cQ_cj">全球赞助商</p>';                
+                liveStr += '<p>'+
+                            '<label></label>'+
+                            '<img src="'+res.data.team1_logo+'">'+
+                        '</p>'+
+                        '<p class="score">暂无直播</p>'+
+                        '<p><img src="'+res.data.team2_logo+'"></p>';           
             }
             $(".match .playing p").remove();
             $(".match .playing").html(liveStr);

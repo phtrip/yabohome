@@ -136,6 +136,96 @@
   }
 }
 
+@-webkit-keyframes qfour {
+  0,75%{
+    right: -58px;
+    opacity: 0;
+  }
+  100%{
+    right: 48px;
+    opacity: 1;
+  }
+}
+@keyframes qfour {
+  0,75%{
+    right: -58px;
+    opacity: 0;
+  }
+  100%{
+    right: 48px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes qthree {
+  0,75%{
+    right: -48px;
+    opacity: 0;
+  }
+  100%{
+    right: 46px;
+    opacity: 1;
+  }
+}
+@keyframes qtheree {
+  0,75%{
+    right: -48px;
+    opacity: 0;
+  }
+  100%{
+    right: 46px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes qtwo {
+  0,75%{
+    right: 46px;
+    opacity: 0;
+  }
+  100%{
+    right: 196px;
+    opacity: 1;
+  }
+}
+@keyframes qtwo {
+  0,75%{
+    right: 46px;
+    opacity: 0;
+  }
+  100%{
+    right: 196px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes qone {
+  0,75%{
+    right: 196px;
+    opacity: 0;
+  }
+  100%{
+    right: 334px;
+    opacity: 1;
+  }
+}
+@keyframes qone {
+  0,75%{
+    right: 196px;
+    opacity: 0;
+  }
+  100%{
+    right: 334px;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+/*
 @-webkit-keyframes qone {
   0% {
     transform: translateZ(0)  
@@ -268,7 +358,7 @@
   100% {
     transform: translateZ(0)
   }
-}
+}*/
 
 @-webkit-keyframes opacity0-5 {
   0% {
@@ -295,7 +385,7 @@
     opacity: .5;
   }
 }
-
+/*
 @-webkit-keyframes oneTwo {
   0% {
     opacity: 0;
@@ -385,7 +475,7 @@
     opacity: .5;
     transform: translateZ(0)
   }
-}
+}*/
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0)
