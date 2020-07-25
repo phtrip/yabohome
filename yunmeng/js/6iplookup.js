@@ -243,6 +243,12 @@ $(function() {
     $('body').delegate('.callme', 'click', function() {//var url = 'tel:' + tel ;
     //location.href = url;
     });
+    $(document).on("click", ".layui-layer-btn", function() {
+        $('body,html').animate({
+          scrollTop: 0
+        },
+        500);
+    })
     $('.show_box .list a').click(function() {
         var imageobj = new Image();
         var html = $(this).html()
