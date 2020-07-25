@@ -791,6 +791,9 @@ img {
 	.advantage_box .text {
 	    padding: 8.5em 1.2em 0 1.2em;
 	}
+	.tips2 span {
+		bottom: 17%;
+	}
 }
 @media (max-width:375px) {
 	.bill-img {
