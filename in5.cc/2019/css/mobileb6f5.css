@@ -1,0 +1,44 @@
+﻿@media screen and (max-width: 768px){
+	.page-container .sidebar-menu{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 50px;
+		z-index: 99;
+	}
+	.page-container .sidebar-menu .sidebar-menu-inner{
+		height: 100%;
+	}
+	.page-container .sidebar-menu .sidebar-menu-inner .logo-env{
+		height: 50px;
+		padding: 0;
+	}
+	.sidebar-menu .logo-env .logo{
+		height: 100%;
+	}
+	.sidebar-menu .logo-env .logo img{
+		height: 75%;
+		width: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle{
+		float: left;
+		margin-top: 15px;
+	}
+	#main-menu{
+		position: fixed;
+		margin-top: 0;
+		top: 50px;
+		left: 0;
+		background-color: #456;
+		height: calc(100vh - 50px);
+		overflow-y: scroll; 
+	}
+	.main-content{
+		margin-top: 50px;
+	}
+}

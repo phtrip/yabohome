@@ -1,0 +1,91 @@
+﻿.td-logo-text{
+	width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 75px;
+    margin-right: 10px;
+    float: left;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+
+}
+
+blockquote img{max-width: 100%;}
+.box2{margin: 5px 0 0;}
+.pl-5{padding-left: 5px;}
+.pr-5{padding-right: 5px;}
+
+@media screen and (max-width: 767px) {
+	.panel {padding: 20px 0px;}
+
+	.page-container .main-content.td-linl-items{
+		padding: 10px;
+	}
+	.page-container .main-content.td-linl-items .main-footer{
+		margin-left: -10px;
+    	margin-right: -10px;
+	}
+	.td-linl-items .row{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.td-linl-items .panel{padding: 20px 0;}
+	.td-linl-items .col-xs-12 img{width:100px;}
+	.td-linl-items .col-xs-12 .box2{height: 130px;}
+	.td-linl-items .col-xs-12 .xe-comment strong{font-size: 2em;line-height: 1em;/* overflow: hidden; *//* text-overflow: ellipsis; *//* display: -webkit-box; *//* -webkit-line-clamp: 2; *//* -webkit-box-orient: vertical; *//* height: 40px; *//* width: 100%; */}
+	.td-linl-items .col-xs-12 .overflowClip_2{
+	    font-size: 1.5em;
+	    margin-top: 5px;
+	}
+	.td-linl-items [class*="col-xs-"]{
+	    padding-left: 5px;
+	    padding-right: 5px;
+	}
+	.td-linl-items .col-xs-3{
+	    padding-left: 2px;
+	    padding-right: 2px;
+	}
+	.td-linl-items .col-td-square .xe-comment-entry img,.td-linl-items .col-td-square .xe-comment-entry .td-logo-text{
+    	float: initial;
+    	width: 100%;
+    	margin-top: -100%;
+	}
+	.td-linl-items .col-td-square .xe-comment-entry .td-logo-text{
+		height: 0;
+		padding-top: 100%;
+	}
+	.td-linl-items .col-td-square .xe-comment-entry .td-logo-text b{
+		display: block;
+	    margin-top: -100%;
+	    line-height: 100%;
+	    font-size: 150%;
+	}
+	.td-linl-items .col-td-square .overflowClip_2{
+    	height: 34px;
+	}
+	.td-linl-items .col-td-square .xe-comment strong{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		height: 18px;
+	}
+	.td-linl-items .col-td-square .box2{
+    	height: auto;
+	}
+	.td-linl-items .col-td-square .xe-widget.xe-conversations{
+	    padding: 5px;
+	    margin-top: 10px;
+	}
+	.td-linl-items .col-td-square .xe-comment-entry>a{
+		display: block;
+		overflow: hidden;
+		width: 100%;
+		height: 0;
+		padding-top: 100%;
+	}
+}

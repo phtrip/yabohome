@@ -1,0 +1,160 @@
+﻿.app-block {
+    background-color: #202831;
+    margin-top: -20px;
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 9px 4px 1px 4px;
+    text-align: center;
+    color: white;
+}
+
+.badge-red {
+    color: white;
+    background-color: red;
+    margin-right: 9px
+}
+
+.download-btn {
+    display: inline-block;
+    margin-left: 15px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: transparent;
+    white-space: nowrap;
+    padding: 3px 7px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+:hover.download-btn {
+    background-color: #789;
+}
+
+.font-13{
+    font-size: 13px;
+}
+
+.app-tab-icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .app-block {
+        margin-top: 0px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .badge-red {
+        margin-right: 0px;
+        margin-left: 3px;
+    }
+
+    .font-16 {
+        font-weight: 100;
+        font-size: 12px;
+    }
+
+    .download-btn {
+        margin-left: 5px;
+        margin-right: 0px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .app-block>button,
+    .app-block>span {
+        display: none;
+    }
+
+    .app-tab-icon {
+        display: block;
+        margin: 8px auto;
+    }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+    .app-block>button,
+    .app-block>span {
+        display: inline-block;
+    }
+
+    .app-tab-icon {
+        display: none;
+    }
+}
+
+/*下方廣告區*/
+.app-ad-block {
+    height: 70px;
+    display: block;
+    visibility: visible;
+    text-align: center;
+    width: 100%;
+    transition: height 1s ease-in-out 0s;
+    background: none 0px 0px repeat scroll rgba(68, 85, 102, 1) !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    position: fixed !important;
+    z-index: 1999900 !important;
+    display: none;
+}
+
+.middle {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.d-block {
+    display: inline-block;
+}
+
+.align-block {
+    position: relative;
+    top: 50%;
+    transform: translateY(35%);
+    color: white;
+    padding-left: 0px;
+}
+
+.middle p {
+    color: white;
+    margin-bottom: 0px;
+}
+
+.middle img {
+    width: 40px;
+    height: auto;
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .app-ad-block {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .middle img {
+        margin-left: 3px;
+    }
+
+    .middle p {
+        font-size: 12px;
+    }
+}
