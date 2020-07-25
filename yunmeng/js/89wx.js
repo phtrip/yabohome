@@ -54,7 +54,7 @@ var wxNumber_count = wxNumber.length;
 // 打开时间 改轮换到了哪一个
 var wx_index = count % wxNumber_count;
 // console.log(wx_index);
-console.log(wxNumber[wx_index]);
+// console.log(wxNumber[wx_index]);
 
 
 

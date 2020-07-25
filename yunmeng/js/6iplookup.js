@@ -207,7 +207,7 @@ $(function() {
                 content: "安装好专用APP后，请添加小妹账号",
                 yes: function(index, layero) {
                     layer.close(layid);
-                    Clipboard.copy(wxNumber[wx_index]);
+                    Clipboard.copy($(".tel_no").text());
                 }
             });
             //	_czc.push(["_trackEvent",'下载MChat','安卓','点击下载',1,'']);
@@ -222,7 +222,7 @@ $(function() {
                 content: "安装好专用APP后，请添加小妹账号",
                 yes: function(index, layero) {
                     layer.close(layid);
-                    Clipboard.copy(wxNumber[wx_index]);
+                    Clipboard.copy($(".tel_no").text());
                 }
             });
             //_czc.push(["_trackEvent",'下载mchat','IOS','打开APPStore',1,'']);
